@@ -77,3 +77,41 @@ expandBtn.forEach((btn) => {
         btn.classList.toggle("open");
     });
 });
+
+// Language dropdown
+const dropdownLanguageBtn = document.getElementById("dropdown-language-btn");
+const dropdownLanguageContent = document.getElementById("dropdown-language-content");
+
+// Country codes
+const locales = ["vi-VN", "en-GB","zh-CN","ja-JP","ko-KR"];
+// Get flag source URL based on country code
+function getFlagSrc(countryCode) {
+  return /^[A-Z]{2}$/.test(countryCode)
+      ? `https://flagsapi.com/${countryCode.toUpperCase()}/shiny/64.png`
+    : "";
+}
+// Set selected locale and update dropdown
+function setSelectedLocale(locale) {
+  const intlLocale = new Intl.Locale(locale);
+  const langName = locale.slice(0, 2).toUpperCase();
+
+  dropdownLanguageContent.innerHTML = "";
+
+  const otherLocales = locales.filter((loc) => loc !== locale);
+  otherLocales.forEach((otherLocale) => {
+    const otherIntlLocale = new Intl.Locale(otherLocale);
+    const otherLangName = otherLocale.slice(0,2).toUpperCase();
+
+    const listEl = document.createElement("li");
+    listEl.innerHTML = `<img src="${getFlagSrc(otherIntlLocale.region)}" />${otherLangName}`;
+    listEl.value = otherLocale;
+    listEl.addEventListener("mousedown", function () {
+      setSelectedLocale(otherLocale);
+    });
+    dropdownLanguageContent.appendChild(listEl);
+  });
+
+  dropdownLanguageBtn.innerHTML = `<img src="${getFlagSrc(intlLocale.region)}"/>${langName}<span class="arrow-down"></span>`;
+}
+// Initialize with the first locale
+setSelectedLocale(locales[0]);
