@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/testimonial.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Animation css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Font family -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
+  <body>
+    <div class="bg-white w-full z-[1000]" id="header">
+      <div
+        class="top-header flex items-center justify-between px-6 py-2 bg-white"
+      >
+        <div class="flex items-center gap-3">
+          <img
+            src="images/VDI-logo.svg"
+            alt="VEIPI Logo"
+            width="60"
+            height="60"
+          />
+          <div class="font-bold text-[18px] leading-tight text-[#20451e]">
+            VIỆN NGHIÊN CỨU ĐÀO TẠO KHỞI NGHIỆP<br />VÀ SỞ HỮU TRÍ TUỆ
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <button
+            class="bg-green-700 text-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-green-800"
+          >
+            Đăng ký tư vấn ngay <em class="fa fa-arrow-right"></em>
+          </button>
+          <button
+            onclick="toggleSearchModal()"
+            class="bg-gray-100 rounded-full p-2 hover:bg-gray-200"
+          >
+            <em class="fas fa-search"></em>
+          </button>
+          <div class="flex items-center gap-1">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/197/197484.png"
+              alt="VN"
+              width="18"
+              height="18"
+            />
+            <span class="text-xs">VN</span>
+            <em class="fa fa-angle-down text-xs"></em>
+          </div>
+        </div>
+      </div>
+
+      <header class="navbar sticky">
+        <div class="menu-btn">
+          <div class="menu-btn__lines"></div>
+        </div>
+        <ul class="menu-items">
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn">Trang chủ</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn">Giới thiệu</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Chương trình đào tạo
+              <i class="fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Chương trình đào tạo 1
+                  <i class="fa-solid fa-angle-right icon-pc"></i>
+                  <i class="fa-solid fa-angle-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Chương trình đào tạo 2
+                  <i class="fa-solid fa-angle-right icon-pc"></i>
+                  <i class="fa-solid fa-angle-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Chương trình đào tạo 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Thư viện điện tử
+              <i class="fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Thư viện điện tử 1
+                  <i class="fa-solid fa-angle-right icon-pc"></i>
+                  <i class="fa-solid fa-angle-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Thư viện điện tử 2
+                  <i class="fa-solid fa-angle-right icon-pc"></i>
+                  <i class="fa-solid fa-angle-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Thư viện điện tử 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Đổi mới sáng tạo</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Dịch vụ tư vấn
+              <i class="fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Dịch vụ tư vấn 1
+                  <i class="fa-solid fa-angle-right icon-pc"></i>
+                  <i class="fa-solid fa-angle-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Dịch vụ tư vấn 2
+                  <i class="fa-solid fa-angle-right icon-pc"></i>
+                  <i class="fa-solid fa-angle-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Dịch vụ tư vấn 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Dự án & đối tác</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn">Liên hệ</a>
+          </li>
+        </ul>
+      </header>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="searchModal"
+      class="fixed inset-0 bg-black opacity-90 z-[1000] hidden items-start justify-center pt-32"
+    >
+      <!-- Modal content -->
+      <div class="relative w-full p-5! text-center">
+        <div class="float-right">
+          <button
+            class="text-white uppercase text-lg"
+            onclick="toggleSearchModal()"
+          >
+            Close
+          </button>
+        </div>
+        <div
+          class="flex rounded-md shadow-lg overflow-hidden bg-white max-w-3xl mx-4 mt-20! m-auto!"
+        >
+          <input
+            type="text"
+            placeholder="Tìm kiếm ..."
+            class="flex-1 px-6! py-4! text-lg text-gray-700 focus:outline-none"
+          />
+          <button
+            class="bg-pink-600 hover:bg-pink-700 px-4! py-3! text-white font-semibold text-sm uppercase"
+          >
+            Search Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="w-full bg-[#020d31] text-[#aaadb7]">
+      <div class="pt-[125px] max-w-[1200px] mx-auto px-[15px]">
+        <div class="pb-[100px]">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            <div>
+              <a
+                href="#"
+                aria-label="Go home"
+                title="Company"
+                class="inline-flex items-center"
+              >
+                <img
+                  src="https://vdigital.vn/wp-content/uploads/2022/09/VDI-logo.svg"
+                  alt="logo"
+                  width="160px"
+                  height="45px"
+                />
+              </a>
+              <span>Copyright © 2022 VDI, All Rights Reserved.</span>
+              <div class="mt-4 flex">
+                <a href="#" class="icon-social-medial"
+                  ><i class="fa-brands fa-square-facebook"></i
+                ></a>
+                <a href="#" class="icon-social-medial"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a href="#" class="icon-social-medial"
+                  ><i class="fa-brands fa-square-tumblr"></i
+                ></a>
+                <a href="#" class="icon-social-medial"
+                  ><i class="fa-brands fa-square-youtube"></i
+                ></a>
+              </div>
+            </div>
+            <div class="address">
+              <h3 class="font-semibold text-[24px] tracking-wide text-white">
+                Địa chỉ liên hệ
+              </h3>
+              <ul class="mt-2 space-y-2">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-headphones me-1"></i>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                  >
+                    +0243.5690436 | 0986805511</a
+                  >
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-envelope me-1"></i>
+                  <a
+                    href=""
+                    class="relative inline-block text-black hover-line"
+                  >
+                    mkt@vdigital.vn</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-solid fa-earth-americas me-1"></i>Tầng 21, Tòa
+                  nhà ICON4, 243A Đê La Thành, Hà Nội.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[24px] tracking-wide text-white">
+                Giới thiệu
+              </h3>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Về chúng tôi</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Hợp tác kinh doanh</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Kho tri thức</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Tuyển Dụng</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Liên Hệ</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[24px] tracking-wide text-white">
+                Dịch vụ
+              </h3>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Tích hợp hệ thống</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Chuyển đổi số</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Điện toán đám mây</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >An ninh an toàn thông tin</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Giải pháp công nghệ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >VietlottSMS</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <img
+            src="/images/dmca_protected_sml_120l.png"
+            alt="dmca_protected_sml"
+            width="121px"
+            height="24px"
+          />
+        </div>
+        <div
+          class="flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row"
+        >
+          <p class="text-gray-600">Privacy Policy - Terms & Conditions</p>
+        </div>
+      </div>
+    </footer> -->
+
+    <div class="overlay"></div>
+    <script src="js/main.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      function toggleSearchModal() {
+        const modal = document.getElementById("searchModal");
+        modal.classList.toggle("hidden");
+        modal.classList.toggle("flex");
+      }
+    </script>
+  </body>
+</html>
