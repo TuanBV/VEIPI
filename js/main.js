@@ -1,6 +1,7 @@
 const overlay = document.querySelector(".overlay");
 const body = document.querySelector("body");
 const menuBtn = document.querySelector(".menu-btn");
+const navbar = document.querySelector(".navbar");
 const menuItems = document.querySelector(".menu-items");
 const expandBtn = document.querySelectorAll(".expand-btn");
 const closeBtn = document.querySelector(".close-btn");
