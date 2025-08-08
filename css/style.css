@@ -465,7 +465,7 @@ a:hover {
   }
 
   .top-header {
-    width: 100vw;
+    width: 100%;
     font-size: 14px;
     display: block;
   }
@@ -612,8 +612,5 @@ a:hover {
   }
   .contact {
     display: none !important;
-  }
-  .top-header {
-    justify-content: center;
   }
 }
