@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  font-family: "Muli", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .bg-edf5ed {
   background-color: #edf5ed;
@@ -10,36 +10,18 @@ body {
   background-color: #f5faf5;
 }
 
-.text-1a421a {
-  color: #1a421a;
+.text-20451e {
+  color: #20451e;
 }
 
-.font-muli {
-  font-family: "Muli", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Josefin Sans", sans-serif;
-}
-
-p {
-  font-family: "Roboto", sans-serif;
-}
-
-span {
-  font-family: "Roboto Slab", serif;
+.text-008542 {
+  color: #008542;
 }
 
 .max-w-custom {
   max-width: 1200px;
   margin: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 2.5rem 0.75rem 2.5rem 0.75rem;
 }
 
 /* top header */
@@ -49,7 +31,7 @@ span {
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  padding: 11px 0;
+  padding: 0.75rem;
 }
 
 /* Language */
