@@ -384,9 +384,9 @@
         <div class="flex flex-col lg:flex-row gap-8">
           <!-- Sidebar filter -->
           <aside class="w-full lg:w-1/4 mb-6 lg:mb-0 slider-filter">
-            <div class="bg-[#f5faf5] rounded-xl shadow-lg">
+            <div class="bg-white shadow-lg">
               <h3
-                class="font-bold text-lg text-green-900 border-b-[1px] border-[#e5e5e5] px-4 py-2"
+                class="font-bold text-base bg-[#eaf6e0] text-gray-800 border-b-2 border-green-600 px-4 py-2 text-center"
               >
                 Tin tức & sự kiện
               </h3>
@@ -394,14 +394,14 @@
                 <li>
                   <a
                     href="#"
-                    class="block py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
+                    class="py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
                     ><i class="fa-solid fa-angle-right me-3"></i>Tin tức viện</a
                   >
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="block py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
+                    class="py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
                     ><i class="fa-solid fa-angle-right me-3"></i>Góc nhìn chuyên
                     gia</a
                   >
@@ -409,7 +409,7 @@
                 <li>
                   <a
                     href="#"
-                    class="block py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
+                    class="py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
                     ><i class="fa-solid fa-angle-right me-3"></i>Cập nhật pháp
                     luật</a
                   >
@@ -417,7 +417,7 @@
                 <li>
                   <a
                     href="#"
-                    class="block py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
+                    class="py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
                     ><i class="fa-solid fa-angle-right me-3"></i>Case study thực
                     tiễn</a
                   >
@@ -432,13 +432,12 @@
             >
               TIN TỨC VIỆN
             </h2>
-            <div class="flex flex-col gap-8">
-              <!-- News item 1 -->
-              <div class="flex flex-col md:flex-row gap-6 border-b pb-6">
+            <div class="flex flex-col gap-8 news-content">
+              <div class="flex flex-col md:flex-row gap-6">
                 <img
                   src="images/image2.jpg"
                   alt="NTU Đài Loan"
-                  class="w-full md:w-56 h-40 object-cover rounded-lg"
+                  class="w-full md:w-56 h-40 object-cover"
                   width="224"
                   height="160"
                 />
@@ -464,12 +463,11 @@
                   >
                 </div>
               </div>
-              <!-- News item 2 -->
-              <div class="flex flex-col md:flex-row gap-6 border-b pb-6">
+              <div class="flex flex-col md:flex-row gap-6">
                 <img
                   src="images/image2.jpg"
                   alt="HTWK Đức"
-                  class="w-full md:w-56 h-40 object-cover rounded-lg"
+                  class="w-full md:w-56 h-40 object-cover"
                   width="224"
                   height="160"
                 />
@@ -495,12 +493,11 @@
                   >
                 </div>
               </div>
-              <!-- News item 3 -->
-              <div class="flex flex-col md:flex-row gap-6 border-b pb-6">
+              <div class="flex flex-col md:flex-row gap-6">
                 <img
                   src="images/image2.jpg"
                   alt="HUDDERSFIELD Anh"
-                  class="w-full md:w-56 h-40 object-cover rounded-lg"
+                  class="w-full md:w-56 h-40 object-cover"
                   width="224"
                   height="160"
                 />
@@ -526,12 +523,11 @@
                   >
                 </div>
               </div>
-              <!-- News item 4 -->
-              <div class="flex flex-col md:flex-row gap-6 border-b pb-6">
+              <div class="flex flex-col md:flex-row gap-6">
                 <img
                   src="images/image2.jpg"
                   alt="UIC Hoa Kỳ"
-                  class="w-full md:w-56 h-40 object-cover rounded-lg"
+                  class="w-full md:w-56 h-40 object-cover"
                   width="224"
                   height="160"
                 />
@@ -556,97 +552,97 @@
                   >
                 </div>
               </div>
-              <!-- Pagination -->
-              <nav aria-label="Pagination" class="mt-8 flex justify-center">
-                <ul class="inline-flex items-center -space-x-px text-base h-10">
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-green-700"
-                    >
-                      <span class="sr-only">Previous</span>
-                      <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M15 19l-7-7 7-7"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center justify-center px-4 h-10 leading-tight text-green-700 bg-green-100 border border-green-300 font-bold"
-                      >1</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
-                      >2</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
-                      >3</a
-                    >
-                  </li>
-                  <li>
-                    <span
-                      class="flex items-center justify-center px-4 h-10 leading-tight text-gray-400 bg-white border border-gray-300"
-                      >...</span
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
-                      >8</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
-                      >9</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-green-700"
-                    >
-                      <span class="sr-only">Next</span>
-                      <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
             </div>
+            <!-- Pagination -->
+            <nav aria-label="Pagination" class="mt-8 flex justify-center">
+              <ul class="inline-flex items-center -space-x-px text-base h-10">
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-green-700"
+                  >
+                    <span class="sr-only">Previous</span>
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 19l-7-7 7-7"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-4 h-10 leading-tight text-green-700 bg-green-100 border border-green-300 font-bold"
+                    >1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
+                    >2</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
+                    >3</a
+                  >
+                </li>
+                <li>
+                  <span
+                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-400 bg-white border border-gray-300"
+                    >...</span
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
+                    >8</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
+                    >9</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-green-700"
+                  >
+                    <span class="sr-only">Next</span>
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </section>

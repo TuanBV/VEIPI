@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Animation css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Font family -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="bg-white w-full z-[1000]" id="header">
+      <!-- Top header -->
+      <div
+        class="top-header flex items-center justify-between px-6 py-2 bg-white"
+      >
+        <div class="flex items-center gap-5">
+          <img
+            src="images/VDI-logo.svg"
+            alt="VEIPI Logo"
+            width="120"
+            height="60"
+          />
+          <div class="font-bold text-[10px] lg:text-[18px] text-20451e">
+            VIỆN NGHIÊN CỨU ĐÀO TẠO KHỞI NGHIỆP<br />VÀ SỞ HỮU TRÍ TUỆ
+          </div>
+        </div>
+        <div class="flex items-center gap-4 justify-between">
+          <button
+            class="bg-green-700 text-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-green-800"
+          >
+            Đăng ký tư vấn ngay <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button
+            onclick="toggleSearchModal()"
+            class="w-[40px] h-[40px] flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300 cursor-pointer"
+          >
+            <em class="fas fa-search"></em>
+          </button>
+          <div class="flex items-center gap-1">
+            <div class="dropdown-language" tab-index="0">
+              <button id="dropdown-language-btn"></button>
+              <ul
+                class="dropdown-language-content"
+                id="dropdown-language-content"
+              ></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Menu -->
+      <header class="navbar sticky">
+        <div class="menu-btn">
+          <div class="menu-btn__lines"></div>
+        </div>
+        <ul class="menu-items">
+          <div class="logo-sm">
+            <button class="close-btn text-black">
+              <em class="fas fa-times"></em>
+            </button>
+            <a href="#" title="VDigital"
+              ><img
+                src="https://vdigital.vn/wp-content/uploads/2022/09/VDI-logo.svg"
+                alt="logo"
+                width="auto"
+                height="45px"
+            /></a>
+          </div>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn active"
+              >Trang chủ</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn">Giới thiệu</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Chương trình đào tạo
+              <i class="fa-solid fa-caret-down ms-2"></i>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Chương trình đào tạo 1
+                  <i class="fa-solid fa-caret-right icon-pc"></i>
+                  <i class="fa-solid fa-caret-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Chương trình đào tạo 2
+                  <i class="fa-solid fa-caret-right icon-pc"></i>
+                  <i class="fa-solid fa-caret-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Chương trình đào tạo 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Thư viện điện tử
+              <i class="fa-solid fa-caret-down ms-2"></i>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Thư viện điện tử 1
+                  <i class="fa-solid fa-caret-right icon-pc"></i>
+                  <i class="fa-solid fa-caret-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Thư viện điện tử 2
+                  <i class="fa-solid fa-caret-right icon-pc"></i>
+                  <i class="fa-solid fa-caret-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Thư viện điện tử 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Đổi mới sáng tạo</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Dịch vụ tư vấn
+              <i class="fa-solid fa-caret-down ms-2"></i>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Dịch vụ tư vấn 1
+                  <i class="fa-solid fa-caret-right icon-pc"></i>
+                  <i class="fa-solid fa-caret-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Dịch vụ tư vấn 2
+                  <i class="fa-solid fa-caret-right icon-pc"></i>
+                  <i class="fa-solid fa-caret-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Dịch vụ tư vấn 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Dự án & đối tác</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn">Liên hệ</a>
+          </li>
+        </ul>
+      </header>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="searchModal"
+      class="fixed inset-0 bg-black opacity-90 z-[1000] hidden items-start justify-center"
+    >
+      <!-- Modal content -->
+      <div class="relative w-full p-5! text-center">
+        <div class="float-right">
+          <button
+            class="text-white uppercase text-lg cursor-pointer hover:scale-110"
+            onclick="toggleSearchModal()"
+          >
+            Close
+          </button>
+        </div>
+        <div
+          class="flex rounded-md shadow-lg overflow-hidden bg-white max-w-3xl mx-4 mt-20! m-auto!"
+        >
+          <input
+            type="text"
+            placeholder="Tìm kiếm ..."
+            class="flex-1 px-6! py-4! text-lg text-gray-700 focus:outline-none"
+          />
+          <button
+            class="bg-[#008236] px-4! py-3! text-white font-semibold text-sm uppercase cursor-pointer"
+          >
+            Search Now
+          </button>
+        </div>
+      </div>
+    </div>
+    <main>
+      <!-- Banner -->
+      <div
+        class="relative w-full h-[500px] bg-[url('/images/banner.jpg')] moving-bg"
+      >
+        <div class="z-10 h-full flex items-end justify-center pb-10">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <a href="#" class="flex justify-center">
+              <div
+                class="w-full flex items-center border-2 border-white rounded-[80px] p-2 text-white font-bold text-lg md:text-xl lg:text-2xl shadow-lg bg-black/30 hover:scale-105 transition-transform duration-300"
+              >
+                <img
+                  src="/images/image1.jpg"
+                  alt=""
+                  class="w-20 h-20 rounded-full me-5"
+                  width="auto"
+                  height="auto"
+                />
+                <span>CHƯƠNG TRÌNH <br />ĐÀO TẠO</span>
+              </div>
+            </a>
+            <a href="#" class="flex justify-center">
+              <div
+                class="w-full flex items-center border-2 border-white rounded-[80px] p-2 text-white font-bold text-lg md:text-xl lg:text-2xl shadow-lg bg-black/30 hover:scale-105 transition-transform duration-300"
+              >
+                <img
+                  src="/images/image1.jpg"
+                  alt=""
+                  class="w-20 h-20 rounded-full me-5"
+                  width="auto"
+                  height="auto"
+                />
+                <span>DỊCH VỤ, <br />TƯ VẤN</span>
+              </div>
+            </a>
+            <a href="#" class="flex justify-center">
+              <div
+                class="w-full flex items-center border-2 border-white rounded-[80px] p-2 text-white font-bold text-lg md:text-xl lg:text-2xl shadow-lg bg-black/30 hover:scale-105 transition-transform duration-300"
+              >
+                <img
+                  src="/images/image1.jpg"
+                  alt=""
+                  class="w-20 h-20 rounded-full me-5"
+                  width="auto"
+                  height="auto"
+                />
+                <span>THƯ VIỆN <br />ĐIỆN TỬ</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Courses -->
+      <section
+        class="max-w-custom animate__animated opacity-0"
+        id="section-courses"
+      >
+        <h2 class="text-4xl font-bold text-center mb-8">
+          CÁC KHÓA HỌC TẠI <span class="text-008542">VEIPI</span>
+        </h2>
+        <div class="flex flex-wrap justify-center gap-8">
+          <div
+            class="relative flex flex-col justify-end items-center bg-cover bg-center rounded-2xl border-2 border-green-700 shadow-lg w-[320px] h-[420px] p-6 bg-[url('/images/image2.jpg')]"
+          >
+            <div
+              class="absolute left-0 bottom-0 w-full h-full rounded-2xl bg-gradient-to-t from-slate-800/100 via-slate-800/0"
+            ></div>
+            <div
+              class="text-white text-lg font-bold text-center mb-4 drop-shadow-lg z-10"
+            >
+              KHÓA HỌC DÀNH CHO<br /><span class="text-2xl">DOANH NGHIỆP</span>
+            </div>
+            <a
+              href="#"
+              class="bg-white text-green-700 font-semibold rounded-full px-6 py-2 shadow hover:bg-green-100 transition-colors duration-300 z-10 hover:scale-105"
+              >Xem tất cả</a
+            >
+          </div>
+          <div
+            class="relative flex flex-col justify-end items-center bg-cover bg-center rounded-2xl border-2 border-green-700 shadow-lg w-[320px] h-[420px] p-6 bg-[url('/images/image2.jpg')]"
+          >
+            <div
+              class="absolute left-0 bottom-0 w-full h-full rounded-2xl bg-gradient-to-t from-slate-800/100 via-slate-800/0"
+            ></div>
+            <div
+              class="text-white text-lg font-bold text-center mb-4 drop-shadow-lg z-10"
+            >
+              KHÓA HỌC DÀNH CHO<br /><span class="text-2xl">DOANH NGHIỆP</span>
+            </div>
+            <a
+              href="#"
+              class="bg-white text-green-700 font-semibold rounded-full px-6 py-2 shadow hover:bg-green-100 transition-colors duration-300 z-10 hover:scale-105"
+              >Xem tất cả</a
+            >
+          </div>
+          <div
+            class="relative flex flex-col justify-end items-center bg-cover bg-center rounded-2xl border-2 border-green-700 shadow-lg w-[320px] h-[420px] p-6 bg-[url('/images/image2.jpg')]"
+          >
+            <div
+              class="absolute left-0 bottom-0 w-full h-full rounded-2xl bg-gradient-to-t from-slate-800/100 via-slate-800/0"
+            ></div>
+            <div
+              class="text-white text-lg font-bold text-center mb-4 drop-shadow-lg z-10"
+            >
+              KHÓA HỌC DÀNH CHO<br /><span class="text-2xl">DOANH NGHIỆP</span>
+            </div>
+            <a
+              href="#"
+              class="bg-white text-green-700 font-semibold rounded-full px-6 py-2 shadow hover:bg-green-100 transition-colors duration-300 z-10 hover:scale-105"
+              >Xem tất cả</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Why -->
+      <section class="bg-edf5ed animate__animated opacity-0" id="section-why">
+        <div
+          class="max-w-custom mx-auto flex flex-col md:flex-row items-center justify-between gap-5"
+        >
+          <div
+            class="flex items-center justify-center bg-gradient-to-t from-green-400 to-green-600 rounded-[48px] relative px-10 py-8 w-full md:w-[50%]"
+          >
+            <div class="flex items-center z-10">
+              <div>
+                <div class="text-white font-semibold text-4xl mb-2">
+                  Tại sao chọn
+                </div>
+                <div class="text-white font-extrabold text-8xl leading-tight">
+                  VEIPI
+                </div>
+              </div>
+              <span class="text-[200px] text-white font-extrabold">?</span>
+            </div>
+            <div
+              class="hidden md:block absolute right-[-64px] top-1/2 -translate-y-1/2 md:w-[60%] lg:w-[40%] h-full bg-gradient-to-t from-green-400 to-green-600 [clip-path:polygon(0_0,100%_50%,0_100%)]"
+            ></div>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-6">
+              <li class="flex items-center gap-3">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-600"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span class="font-bold text-lg text-gray-800"
+                  >Nội dung được Cục Sở hữu trí tuệ bảo trợ</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-600"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span class="font-bold text-lg text-gray-800"
+                  >Học liệu số trực quan, đa dạng</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-600"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span class="font-bold text-lg text-gray-800"
+                  >Đội ngũ chuyên gia hàng đầu</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-600"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span class="font-bold text-lg text-gray-800"
+                  >Chứng chỉ đào tạo có giá trị</span
+                >
+              </li>
+            </ul>
+            <div class="mt-5 flex">
+              <a
+                href="#"
+                class="border border-green-700 text-green-700 rounded-full px-4 py-2 font-medium hover:bg-green-50"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Library -->
+      <section
+        class="bg-white animate__animated opacity-0"
+        id="section-library"
+      >
+        <div class="max-w-custom mx-auto px-4">
+          <div class="flex items-center justify-between mb-8">
+            <h2 class="text-xl md:text-4xl font-bold text-20451e">
+              THƯ VIỆN ĐIỆN TỬ
+            </h2>
+            <a
+              href="#"
+              class="bg-green-600 text-white rounded-full px-6 py-2 font-semibold text-base md:text-lg hover:bg-green-700 transition-colors"
+              >Xem tất cả</a
+            >
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="flex flex-col shadow-lg rounded-none overflow-hidden">
+              <img
+                src="images/image3.jpg"
+                width="auto"
+                height="auto"
+                alt="Sách điện tử"
+                class="w-full h-[220px] object-cover"
+              />
+              <a
+                href="#"
+                class="bg-gradient-to-b from-green-500 to-green-700 text-white text-xl font-bold justify-center! py-4 hover:scale-105 transition-transform duration-200"
+              >
+                Sách điện tử
+              </a>
+            </div>
+            <div class="flex flex-col shadow-lg rounded-none overflow-hidden">
+              <img
+                src="images/image3.jpg"
+                width="auto"
+                height="auto"
+                alt="Bài giảng điện tử"
+                class="w-full h-[220px] object-cover"
+              />
+              <a
+                href="#"
+                class="bg-gradient-to-b from-green-500 to-green-700 text-white text-xl font-bold justify-center! py-4 hover:scale-105 transition-transform duration-200"
+              >
+                Bài giảng điện tử
+              </a>
+            </div>
+            <div class="flex flex-col shadow-lg rounded-none overflow-hidden">
+              <img
+                src="images/image3.jpg"
+                width="auto"
+                height="auto"
+                alt="Hệ thống LMS"
+                class="w-full h-[220px] object-cover"
+              />
+              <a
+                href="#"
+                class="bg-gradient-to-b from-green-500 to-green-700 text-white text-xl font-bold justify-center! py-4 hover:scale-105 transition-transform duration-200"
+              >
+                Hệ thống LMS
+              </a>
+            </div>
+            <div class="flex flex-col shadow-lg rounded-none overflow-hidden">
+              <img
+                src="images/image3.jpg"
+                width="auto"
+                height="auto"
+                alt="Video-Case study"
+                class="w-full h-[220px] object-cover"
+              />
+              <a
+                href="#"
+                class="bg-gradient-to-b from-green-500 to-green-700 text-white text-xl font-bold justify-center! py-4 hover:scale-105 transition-transform duration-200"
+              >
+                Video-Case study
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-[#eaf6f0] animate__animated opacity-0"
+        id="section-innovation"
+      >
+        <div class="max-w-custom lg:relative lg:my-20!">
+          <div
+            class="lg:w-1/4 flex items-center justify-between lg:block lg:justify-start mb-5 lg:mb-0"
+          >
+            <h2
+              class="text-xl md:text-4xl font-bold text-20451e leading-tight mb-0 lg:mb-4"
+            >
+              ĐỔI MỚI <br class="hidden lg:block" />SÁNG TẠO
+            </h2>
+            <div class="flex">
+              <a
+                href="#"
+                class="bg-green-600 text-white rounded-full px-6 py-2 font-semibold text-base hover:bg-green-700 transition-colors"
+              >
+                Xem tất cả
+              </a>
+            </div>
+          </div>
+          <div
+            class="lg:w-3/4 lg:flex lg:justify-end lg:absolute lg:right-0 lg:top-[50%] lg:translate-y-[-50%]"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+              <div
+                class="bg-white shadow-lg border-t-4 border-green-700 flex flex-col p-6"
+              >
+                <div class="flex items-center mb-2">
+                  <svg
+                    class="w-10 h-10 text-green-700"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 2.5-1.5 4.5-3.5 5.5V16a1.5 1.5 0 0 1-3 0v-1.5C6.5 13.5 5 11.5 5 9a7 7 0 0 1 7-7z"
+                    />
+                  </svg>
+                  <div class="flex-1 border-b border-green-700 ms-2"></div>
+                </div>
+                <div class="font-bold text-xl text-gray-900 mb-4">
+                  HOẠT ĐỘNG<br />ĐỔI MỚI SÁNG TẠO
+                </div>
+                <img
+                  src="images/image2.jpg"
+                  alt="Hoạt động đổi mới sáng tạo"
+                  class="w-full h-40 object-cover"
+                  width="auto"
+                  height="auto"
+                />
+              </div>
+              <div
+                class="bg-white shadow-lg border-t-4 border-green-700 flex flex-col p-6"
+              >
+                <div class="flex items-center mb-2">
+                  <svg
+                    class="w-10 h-10 text-green-700"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6l2 6h-4l2-6zm0 12v-4" />
+                  </svg>
+                  <div class="flex-1 border-b border-green-700 ms-2"></div>
+                </div>
+                <div class="font-bold text-xl text-gray-900 mb-4">
+                  KẾT QUẢ<br />NGHIÊN CỨU
+                </div>
+                <img
+                  src="images/image2.jpg"
+                  alt="Kết quả nghiên cứu"
+                  class="w-full h-40 object-cover"
+                  width="auto"
+                  height="auto"
+                />
+              </div>
+              <div
+                class="bg-white shadow-lg border-t-4 border-green-700 flex flex-col p-6"
+              >
+                <div class="flex items-center mb-2">
+                  <svg
+                    class="w-10 h-10 text-green-700"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 11V7a4 4 0 0 0-8 0v4M12 17v2m0-2a4 4 0 0 0 4-4h-8a4 4 0 0 0 4 4z"
+                    />
+                    <circle cx="18" cy="6" r="2" />
+                  </svg>
+                  <div class="flex-1 border-b border-green-700 ms-2"></div>
+                </div>
+                <div class="font-bold text-xl text-gray-900 mb-4">
+                  THƯƠNG MẠI HÓA<br />TÀI SẢN TRÍ TUỆ
+                </div>
+                <img
+                  src="images/image2.jpg"
+                  alt="Thương mại hóa tài sản trí tuệ"
+                  class="w-full h-40 object-cover"
+                  width="auto"
+                  height="auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Service -->
+      <section
+        class="max-w-custom animate__animated opacity-0"
+        id="section-service"
+      >
+        <div class="relative">
+          <h2
+            class="text-2xl font-bold text-green-900 px-4 whitespace-nowrap absolute left-[50%] -top-5 bg-white transform -translate-x-1/2"
+          >
+            DỊCH VỤ - TƯ VẤN
+          </h2>
+          <div class="border-2 border-[#008542] rounded-[32px] p-8">
+            <div class="flex justify-end mb-5">
+              <a
+                href="#"
+                class="bg-green-600 text-white rounded-full px-6 py-2 font-semibold hover:bg-green-700 transition-colors"
+              >
+                Xem tất cả
+              </a>
+            </div>
+            <div
+              class="grid grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-40 h-40 rounded-full bg-[#eaf6f0] flex items-center justify-center border-4 border-green-200 mb-4 bg-center bg-cover bg-[url('images/image2.jpg')]"
+                ></div>
+                <div class="text-20451e text-xl font-bold text-center">
+                  Đăng ký bảo hộ
+                </div>
+              </div>
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-40 h-40 rounded-full bg-[#eaf6f0] flex items-center justify-center border-4 border-green-200 mb-4 bg-center bg-cover bg-[url('images/image2.jpg')]"
+                ></div>
+                <div class="text-20451e text-xl font-bold text-center">
+                  Kết nối thương mại hóa
+                </div>
+              </div>
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-40 h-40 rounded-full bg-[#eaf6f0] flex items-center justify-center border-4 border-green-200 mb-4 bg-center bg-cover bg-[url('images/image2.jpg')]"
+                ></div>
+                <div class="text-20451e text-xl font-bold text-center">
+                  Quản trị tài sản trí tuệ
+                </div>
+              </div>
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-40 h-40 rounded-full bg-[#eaf6f0] flex items-center justify-center border-4 border-green-200 mb-4 bg-center bg-cover bg-[url('images/image2.jpg')]"
+                ></div>
+                <div class="text-20451e text-xl font-bold text-center">
+                  Giải quyết tranh chấp
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- News & Events Section -->
+      <section
+        class="bg-[#eaf6f0] animate__animated opacity-0"
+        id="section-news"
+      >
+        <div class="max-w-custom">
+          <div class="flex justify-between items-center mb-8">
+            <h2 class="text-xl md:text-4xl font-bold text-20451e">
+              TIN TỨC - SỰ KIỆN
+            </h2>
+            <a
+              href="#"
+              class="bg-green-600 text-white text-base md:text-lg rounded-full px-6 py-2 font-semibold hover:bg-green-700 transition-colors"
+              >Xem tất cả</a
+            >
+          </div>
+          <div
+            class="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-[100px]"
+          >
+            <div class="flex flex-col">
+              <img
+                src="images/image2.jpg"
+                alt="Main news"
+                width="auto"
+                height="auto"
+                class="w-full object-cover rounded-lg mb-2 h-48 sm:h-64 md:h-80 lg:h-[340px]"
+              />
+              <div
+                class="text-gray-700 text-base sm:text-lg mb-2 sm:mb-4 mt-4 sm:mt-6"
+              >
+                26/5/2025
+              </div>
+              <a
+                href="#"
+                class="text-xl sm:text-2xl md:text-3xl font-bold text-green-900 leading-snug transition-colors duration-200 hover:text-green-600 cursor-pointer"
+              >
+                KHAI GIẢNG KHÓA ĐÀO TẠO KHỞI NGHIỆP, ĐỔI MỚI SÁNG TẠO
+              </a>
+            </div>
+            <ul class="flex flex-col flex-1 gap-5">
+              <li class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
+                <img
+                  src="images/image2.jpg"
+                  alt="News 1"
+                  width="auto"
+                  height="auto"
+                  class="w-full sm:w-[120px] md:w-[146px] h-[120px] sm:h-[146px] object-cover rounded-lg"
+                />
+                <div class="flex-1">
+                  <div class="text-gray-700 text-sm sm:text-base mb-2 sm:mb-5">
+                    20/6/2025
+                  </div>
+                  <a
+                    href="#"
+                    class="font-bold text-green-900 text-base sm:text-lg leading-tight transition-colors duration-200 hover:text-green-600 cursor-pointer"
+                  >
+                    CHIA SẺ KINH NGHIỆM<br class="hidden sm:block" />ĐĂNG KÝ BẢO
+                    HỘ SÁNG CHẾ
+                  </a>
+                </div>
+              </li>
+              <li class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
+                <img
+                  src="images/image2.jpg"
+                  alt="News 2"
+                  width="auto"
+                  height="auto"
+                  class="w-full sm:w-[120px] md:w-[146px] h-[120px] sm:h-[146px] object-cover rounded-lg"
+                />
+                <div class="flex-1">
+                  <div class="text-gray-700 text-sm sm:text-base mb-2 sm:mb-5">
+                    01/7/2025
+                  </div>
+                  <a
+                    href="#"
+                    class="font-bold text-green-900 text-base sm:text-lg leading-tight transition-colors duration-200 hover:text-green-600 cursor-pointer"
+                  >
+                    HỘI THẢO XÂY DỰNG<br class="hidden sm:block" />HỆ SINH THÁI
+                    KHỞI NGHIỆP
+                  </a>
+                </div>
+              </li>
+              <li class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
+                <img
+                  src="images/image2.jpg"
+                  alt="News 3"
+                  width="auto"
+                  height="auto"
+                  class="w-full sm:w-[120px] md:w-[146px] h-[120px] sm:h-[146px] object-cover rounded-lg"
+                />
+                <div class="flex-1">
+                  <div class="text-gray-700 text-sm sm:text-base mb-2 sm:mb-5">
+                    01/7/2025
+                  </div>
+                  <a
+                    href="#"
+                    class="font-bold text-green-900 text-base sm:text-lg leading-tight transition-colors duration-200 hover:text-green-600 cursor-pointer"
+                  >
+                    HỘI THẢO XÂY DỰNG<br class="hidden sm:block" />HỆ SINH THÁI
+                    KHỞI NGHIỆP
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Carousel khách hàng -->
+      <div
+        class="max-w-custom text-center font-bold text-green-900 animate__animated opacity-0"
+        id="section-carousel-customer"
+      >
+        <div class="relative items-center flex justify-center">
+          <div
+            class="flex flex-col md:flex-row items-center w-full justify-between gap-4"
+          >
+            <h2
+              class="text-2xl md:text-4xl font-bold text-green-900 text-center md:text-left"
+            >
+              KHÁCH HÀNG TIÊU BIỂU
+            </h2>
+            <a
+              href="#"
+              class="bg-green-600 text-white rounded-full px-6 py-2 font-semibold text-base md:text-lg hover:bg-green-700 transition-colors mt-4 md:mt-0"
+            >
+              Xem tất cả
+            </a>
+          </div>
+        </div>
+        <div class="carousel-customer py-5">
+          <div class="carousel-item">
+            <div
+              class="relative flex flex-col justify-end items-center bg-cover bg-center shadow-lg w-[250px] h-[250px] p-6 bg-[url('/images/image2.jpg')]"
+            >
+              <div
+                class="absolute left-0 bottom-0 w-full h-full rounded-2xl bg-gradient-to-t from-slate-800/100 via-slate-800/0"
+              ></div>
+              <div
+                class="text-white text-lg font-bold text-center mb-4 drop-shadow-lg z-10"
+              >
+                ĐẠI HỌC QUỐC GIA HÀ NỘI
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="relative flex flex-col justify-end items-center bg-cover bg-center shadow-lg w-[250px] h-[250px] p-6 bg-[url('/images/image2.jpg')]"
+            >
+              <div
+                class="absolute left-0 bottom-0 w-full h-full rounded-2xl bg-gradient-to-t from-slate-800/100 via-slate-800/0"
+              ></div>
+              <div
+                class="text-white text-lg font-bold text-center mb-4 drop-shadow-lg z-10"
+              >
+                ĐẠI HỌC QUỐC GIA HÀ NỘI
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="relative flex flex-col justify-end items-center bg-cover bg-center shadow-lg w-[250px] h-[250px] p-6 bg-[url('/images/image2.jpg')]"
+            >
+              <div
+                class="absolute left-0 bottom-0 w-full h-full rounded-2xl bg-gradient-to-t from-slate-800/100 via-slate-800/0"
+              ></div>
+              <div
+                class="text-white text-lg font-bold text-center mb-4 drop-shadow-lg z-10"
+              >
+                ĐẠI HỌC QUỐC GIA HÀ NỘI
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="relative flex flex-col justify-end items-center bg-cover bg-center shadow-lg w-[250px] h-[250px] p-6 bg-[url('/images/image2.jpg')]"
+            >
+              <div
+                class="absolute left-0 bottom-0 w-full h-full rounded-2xl bg-gradient-to-t from-slate-800/100 via-slate-800/0"
+              ></div>
+              <div
+                class="text-white text-lg font-bold text-center mb-4 drop-shadow-lg z-10"
+              >
+                ĐẠI HỌC QUỐC GIA HÀ NỘI
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="relative flex flex-col justify-end items-center bg-cover bg-center shadow-lg w-[250px] h-[250px] p-6 bg-[url('/images/image2.jpg')]"
+            >
+              <div
+                class="absolute left-0 bottom-0 w-full h-full rounded-2xl bg-gradient-to-t from-slate-800/100 via-slate-800/0"
+              ></div>
+              <div
+                class="text-white text-lg font-bold text-center mb-4 drop-shadow-lg z-10"
+              >
+                ĐẠI HỌC QUỐC GIA HÀ NỘI
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="relative flex flex-col justify-end items-center bg-cover bg-center shadow-lg w-[250px] h-[250px] p-6 bg-[url('/images/image2.jpg')]"
+            >
+              <div
+                class="absolute left-0 bottom-0 w-full h-full rounded-2xl bg-gradient-to-t from-slate-800/100 via-slate-800/0"
+              ></div>
+              <div
+                class="text-white text-lg font-bold text-center mb-4 drop-shadow-lg z-10"
+              >
+                ĐẠI HỌC QUỐC GIA HÀ NỘI
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="relative flex flex-col justify-end items-center bg-cover bg-center shadow-lg w-[250px] h-[250px] p-6 bg-[url('/images/image2.jpg')]"
+            >
+              <div
+                class="absolute left-0 bottom-0 w-full h-full rounded-2xl bg-gradient-to-t from-slate-800/100 via-slate-800/0"
+              ></div>
+              <div
+                class="text-white text-lg font-bold text-center mb-4 drop-shadow-lg z-10"
+              >
+                ĐẠI HỌC QUỐC GIA HÀ NỘI
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-custom text-center font-bold text-green-900">
+        <div class="relative items-center flex justify-center">
+          <div
+            class="flex flex-col md:flex-row items-center w-full justify-between gap-4"
+          >
+            <h2
+              class="text-2xl md:text-4xl font-bold text-green-900 text-center md:text-left"
+            >
+              ĐỘI NGŨ CHUYÊN GIA CỦA <span class="text-008542">VEIPI</span>
+            </h2>
+            <a
+              href="#"
+              class="bg-green-600 text-white rounded-full px-6 py-2 font-semibold text-base md:text-lg hover:bg-green-700 transition-colors mt-4 md:mt-0"
+            >
+              Xem tất cả
+            </a>
+          </div>
+        </div>
+        <div class="carousel py-5">
+          <div class="carousel-item">
+            <img
+              src="/images/partner/Thue-e.png"
+              alt=""
+              height="auto"
+              width="auto"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/partner/Thue-e.png"
+              alt=""
+              height="auto"
+              width="auto"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/partner/Thue-e.png"
+              alt=""
+              height="auto"
+              width="auto"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/partner/Thue-e.png"
+              alt=""
+              height="auto"
+              width="auto"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/partner/Thue-e.png"
+              alt=""
+              height="auto"
+              width="auto"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/partner/Thue-e.png"
+              alt=""
+              height="auto"
+              width="auto"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/partner/Thue-e.png"
+              alt=""
+              height="auto"
+              width="auto"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/partner/Thue-e.png"
+              alt=""
+              height="auto"
+              width="auto"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/partner/Thue-e.png"
+              alt=""
+              height="auto"
+              width="auto"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/partner/Thue-e.png"
+              alt=""
+              height="auto"
+              width="auto"
+            />
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-item">
+              <img
+                src="/images/partner/Thue-e.png"
+                alt=""
+                height="auto"
+                width="auto"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/images/partner/Thue-e.png"
+                alt=""
+                height="auto"
+                width="auto"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/images/partner/Thue-e.png"
+                alt=""
+                height="auto"
+                width="auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-f5faf5">
+      <div class="max-w-custom px-8 md:px-0">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 justify-between items-start py-8 gap-12"
+        >
+          <div class="flex flex-col items-center">
+            <img
+              src="images/VDI-logo.svg"
+              alt="VEIPI Logo"
+              width="200px"
+              height="auto"
+            />
+            <div class="font-bold text-[20px] text-20451e text-center">
+              VIỆN NGHIÊN CỨU ĐÀO TẠO KHỞI NGHIỆP VÀ SỞ HỮU TRÍ TUỆ
+            </div>
+          </div>
+          <ul class="flex flex-col gap-2 text-20451e">
+            <li>
+              <i class="fa-solid fa-location-dot me-2"></i> Tầng 3 Tòa nhà 96A
+              Định Công, Thanh Xuân, Hà Nội
+            </li>
+            <li><i class="fa-solid fa-phone me-2"></i> 024.3668 7118</li>
+            <li>
+              <i class="fa-solid fa-envelope me-2"></i>
+              info@truongthanhmedia.vn
+            </li>
+          </ul>
+          <div class="flex flex-col gap-10">
+            <ul
+              class="flex flex-1 flex-col gap-2 text-base lg:ps-5 lg:border-l-[2px] border-[#ccc]"
+            >
+              <li>
+                <a href="#" class="text-20451e!"
+                  >Các câu hỏi thường gặp (FAQ)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-20451e!">Chính sách bán hàng</a>
+              </li>
+              <li>
+                <a href="#" class="text-20451e!">Chính sách bảo mật</a>
+              </li>
+            </ul>
+            <div class="flex gap-3 justify-start">
+              <a href="#">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2626/2626269.png"
+                  alt=""
+                  width="30px"
+                  height="30px"
+                  class="hover:scale-110"
+                />
+              </a>
+              <a href="#"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/128/3670/3670163.png"
+                  alt=""
+                  srcset=""
+                  width="30px"
+                  height="auto"
+                  class="hover:scale-110"
+              /></a>
+              <a href="#">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/4782/4782345.png"
+                  alt=""
+                  srcset=""
+                  width="30px"
+                  height="auto"
+                  class="hover:scale-110"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="text-20451e pb-3" />
+        <div class="text-20451e text-base text-center">
+          Copyright © 2023 by
+          <span class="font-bold">TRUONG THANH MEDIA</span>
+        </div>
+      </div>
+    </footer>
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <script src="js/main.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      function toggleSearchModal() {
+        const modal = document.getElementById("searchModal");
+        modal.classList.toggle("hidden");
+        modal.classList.toggle("flex");
+      }
+      // Carousel
+      $(document).ready(function () {
+        $(".carousel").slick({
+          slidesToShow: 8,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 10000,
+          infinite: true,
+          speed: 500,
+          prevArrow:
+            '<button class="slick-prev custom-prev"><i class="fa-solid fa-caret-left text-green-600"></i></button>',
+          nextArrow:
+            '<button class="slick-next custom-next"><i class="fa-solid fa-caret-right text-green-600"></i></button>',
+          pauseOnHover: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+        $(".carousel-customer").slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 10000,
+          infinite: true,
+          speed: 500,
+          prevArrow: "",
+          nextArrow: "",
+          pauseOnHover: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
