@@ -120,6 +120,7 @@ a {
 }
 
 a:hover {
+  scale: 1.05;
   -webkit-transition-property: color, background;
   -webkit-transition-duration: 0.5s, 0.5s;
   -webkit-transition-timing-function: linear, ease-out;
@@ -439,6 +440,17 @@ a:hover {
 .slider-filter ul li:not(:last-child) {
   padding-bottom: 5px;
   border-bottom: 1px solid #e5e5e5;
+}
+
+/* Course, News */
+.news-content > div:not(:last-child),
+.course-content > div:not(:last-child) {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #008542;
+}
+
+.active {
+  border-bottom: 2px solid white;
 }
 
 /* Responsive style */
