@@ -69,14 +69,25 @@ closeBtn.addEventListener("click", e => {
     });
 });
 
-// mobile menu expand
-expandBtn.forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        btn.classList.toggle("open");
+document.querySelectorAll('.fa-caret-down').forEach(function(icon) {
+    icon.addEventListener('click', function(e) {
+        let parentA = icon.closest('a');
+        if (parentA) {
+            parentA.classList.toggle('open');
+        }
+        e.preventDefault();
+        e.stopPropagation();
     });
 });
+// mobile menu expand
+// expandBtn.forEach((btn) => {
+//     btn.addEventListener("click", (event) => {
+//         event.preventDefault();
+//         event.stopPropagation();
+//         btn.classList.toggle("open");
+//     });
+// });
+
 
 // Language dropdown
 const dropdownLanguageBtn = document.getElementById("dropdown-language-btn");
