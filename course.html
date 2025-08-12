@@ -51,7 +51,12 @@
         class="top-header flex items-center justify-between px-6 py-2 bg-white"
       >
         <div class="flex items-center gap-5">
-          <img src="images/logo.png" alt="VEIPI Logo" width="120" height="60" />
+          <img
+            src="./images/logo.png"
+            alt="VEIPI Logo"
+            width="120"
+            height="60"
+          />
           <div class="font-bold text-[10px] lg:text-[18px] text-20451e">
             VIỆN NGHIÊN CỨU ĐÀO TẠO KHỞI NGHIỆP<br />VÀ SỞ HỮU TRÍ TUỆ
           </div>
@@ -90,7 +95,11 @@
               <em class="fas fa-times"></em>
             </button>
             <a href="home.html" title="Trang chủ"
-              ><img src="images/logo.png" alt="logo" width="auto" height="45px"
+              ><img
+                src="./images/logo.png"
+                alt="logo"
+                width="auto"
+                height="45px"
             /></a>
           </div>
           <li class="dropdown">
@@ -464,7 +473,7 @@
             <div class="flex flex-col gap-8 course-content">
               <div class="flex flex-col md:flex-row gap-6">
                 <img
-                  src="images/image2.jpg"
+                  src="./images/image2.jpg"
                   alt="NTU Đài Loan"
                   class="w-full md:w-56 h-40 object-cover"
                   width="224"
@@ -494,7 +503,7 @@
               </div>
               <div class="flex flex-col md:flex-row gap-6">
                 <img
-                  src="images/image2.jpg"
+                  src="./images/image2.jpg"
                   alt="HTWK Đức"
                   class="w-full md:w-56 h-40 object-cover"
                   width="224"
@@ -524,7 +533,7 @@
               </div>
               <div class="flex flex-col md:flex-row gap-6">
                 <img
-                  src="images/image2.jpg"
+                  src="./images/image2.jpg"
                   alt="HUDDERSFIELD Anh"
                   class="w-full md:w-56 h-40 object-cover"
                   width="224"
@@ -554,7 +563,7 @@
               </div>
               <div class="flex flex-col md:flex-row gap-6">
                 <img
-                  src="images/image2.jpg"
+                  src="./images/image2.jpg"
                   alt="UIC Hoa Kỳ"
                   class="w-full md:w-56 h-40 object-cover"
                   width="224"
@@ -677,14 +686,15 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-[url('images/footer.png')] bg-cover">
+    <!-- Footer -->
+    <footer class="bg-[url('./images/footer.png')] bg-cover">
       <div class="max-w-custom px-8 md:px-0">
         <div
-          class="grid grid-cols-1 lg:grid-cols-3 justify-between items-start py-8 gap-12"
+          class="flex flex-col lg:flex-row justify-between items-start py-8 gap-8"
         >
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center w-full lg:w-[30%]">
             <img
-              src="images/logo.png"
+              src="./images/logo.png"
               alt="VEIPI Logo"
               width="200px"
               height="auto"
@@ -693,7 +703,9 @@
               VIỆN NGHIÊN CỨU ĐÀO TẠO KHỞI NGHIỆP VÀ SỞ HỮU TRÍ TUỆ
             </div>
           </div>
-          <ul class="flex flex-col gap-2 text-20451e">
+          <ul
+            class="flex flex-col gap-2 text-20451e text-sm md:text-base w-full lg:w-[40%]"
+          >
             <li>
               <i class="fa-solid fa-location-dot me-2"></i> Tầng 3 Tòa nhà 96A
               Định Công, Thanh Xuân, Hà Nội
@@ -704,9 +716,9 @@
               info@truongthanhmedia.vn
             </li>
           </ul>
-          <div class="flex flex-col gap-10">
+          <div class="flex flex-col gap-10 w-full lg:w-[30%]">
             <ul
-              class="flex flex-1 flex-col gap-2 text-base lg:ps-5 lg:border-l-[2px] border-[#ccc]"
+              class="flex flex-1 flex-col gap-2 lg:ps-5 lg:border-l-[2px] border-[#ccc] text-sm md:text-base"
             >
               <li>
                 <a href="#" class="text-20451e!"
@@ -727,7 +739,6 @@
                   alt=""
                   width="30px"
                   height="30px"
-                  class="hover:scale-110"
                 />
               </a>
               <a href="#"
@@ -737,7 +748,6 @@
                   srcset=""
                   width="30px"
                   height="auto"
-                  class="hover:scale-110"
               /></a>
               <a href="#">
                 <img
@@ -746,14 +756,13 @@
                   srcset=""
                   width="30px"
                   height="auto"
-                  class="hover:scale-110"
                 />
               </a>
             </div>
           </div>
         </div>
         <hr class="text-20451e pb-3" />
-        <div class="text-20451e text-base text-center">
+        <div class="text-20451e text-center text-sm md:text-base">
           Copyright © 2023 by
           <span class="font-bold">TRUONG THANH MEDIA</span>
         </div>
