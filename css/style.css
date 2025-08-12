@@ -146,41 +146,6 @@ a:hover {
   font-size: 20px;
 }
 
-/* nav menu button */
-.menu-btn {
-  position: relative;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.navbar .menu-btn__lines::before,
-.navbar .menu-btn__lines::after {
-  content: "";
-  position: absolute;
-}
-
-.navbar .menu-btn__lines,
-.navbar .menu-btn__lines::before,
-.navbar .menu-btn__lines::after {
-  width: 1.5rem;
-  height: 2px;
-  background: #fff;
-  transition: all 0.4s ease-in-out;
-}
-
-.navbar .menu-btn__lines::before {
-  transform: translateY(-0.5rem);
-}
-
-.navbar .menu-btn__lines::after {
-  transform: translateY(0.5rem);
-}
-
 .navbar .menu-items {
   display: flex;
   align-items: center;
@@ -393,6 +358,10 @@ a:hover {
   align-items: center;
 }
 
+.active-language {
+  background-color: #76a076;
+}
+
 @keyframes move-bg {
   0% {
     background-position: 0 0;
@@ -489,13 +458,9 @@ a:hover {
 
   .top-header {
     width: 100%;
-    font-size: 14px;
-    display: block;
-  }
-
-  .navbar {
-    padding: 10px 0;
-    width: 100vw;
+    font-size: 20px;
+    display: flex;
+    padding: 10px 20px;
   }
 
   .navbar .menu-item {
@@ -522,10 +487,6 @@ a:hover {
   .overlay--active {
     opacity: 1;
     visibility: visible;
-  }
-
-  .menu-btn {
-    display: flex;
   }
 
   .navbar .menu-items {

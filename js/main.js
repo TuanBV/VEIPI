@@ -11,20 +11,16 @@ const header = document.getElementById("header");
 window.addEventListener("scroll", () => {
     if (window.scrollY > 120) {
         header.classList.add("fixed");
-        header.classList.add("-translate-x-1/2");
-        header.classList.add("left-1/2");
         header.classList.add("border-[#e5e5e5]");
         header.classList.add("border-b-[1px]");
         header.classList.add("top-0");
-        document.querySelector(".top-header").classList.add("hidden!");
+        header.classList.add("shadow-lg");
     } else {
         header.classList.remove("fixed");
-        header.classList.remove("-translate-x-1/2");
-        header.classList.remove("left-1/2");
         header.classList.remove("border-[#e5e5e5]");
         header.classList.remove("border-b-[1px]");
         header.classList.remove("top-0");
-        document.querySelector(".top-header").classList.remove("hidden!");
+        header.classList.remove("shadow-lg");
     }
 });
 
