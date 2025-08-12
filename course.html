@@ -68,7 +68,7 @@
             Đăng ký tư vấn ngay <i class="fa-solid fa-arrow-right"></i>
           </button>
           <button
-            onclick="toggleSearchModal()"
+            onclick="toggleModal('registerModal')"
             class="w-[40px] h-[40px] flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300 cursor-pointer"
           >
             <em class="fas fa-search"></em>
@@ -326,9 +326,8 @@
       </header>
     </div>
 
-    <!-- Modal -->
     <div
-      id="searchModal"
+      id="registerModal"
       class="fixed inset-0 bg-black opacity-90 z-[1000] hidden items-start justify-center"
     >
       <!-- Modal content -->
@@ -336,7 +335,7 @@
         <div class="float-right">
           <button
             class="text-white uppercase text-lg cursor-pointer hover:scale-110"
-            onclick="toggleSearchModal()"
+            onclick="toggleModal('registerModal')"
           >
             Close
           </button>
@@ -778,12 +777,5 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script>
-      function toggleSearchModal() {
-        const modal = document.getElementById("searchModal");
-        modal.classList.toggle("hidden");
-        modal.classList.toggle("flex");
-      }
-    </script>
   </body>
 </html>
