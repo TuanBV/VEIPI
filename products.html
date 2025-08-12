@@ -52,7 +52,7 @@
       >
         <div class="flex items-center gap-5">
           <img
-            src="images/VDI-logo.svg"
+            src="./images/logo.png"
             alt="VEIPI Logo"
             width="120"
             height="60"
@@ -68,7 +68,7 @@
             Đăng ký tư vấn ngay <i class="fa-solid fa-arrow-right"></i>
           </button>
           <button
-            onclick="toggleSearchModal()"
+            onclick="toggleModal()"
             class="w-[40px] h-[40px] flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300 cursor-pointer"
           >
             <em class="fas fa-search"></em>
@@ -94,22 +94,28 @@
             <button class="close-btn text-black">
               <em class="fas fa-times"></em>
             </button>
-            <a href="#" title="VDigital"
+            <a href="home.html" title="Trang chủ"
               ><img
-                src="https://vdigital.vn/wp-content/uploads/2022/09/VDI-logo.svg"
+                src="./images/logo.png"
                 alt="logo"
                 width="auto"
                 height="45px"
             /></a>
           </div>
           <li class="dropdown">
-            <a href="#" class="menu-item first-item expand-btn">Trang chủ</a>
+            <a href="home.html" class="menu-item first-item expand-btn"
+              >Trang chủ</a
+            >
           </li>
           <li class="dropdown">
-            <a href="#" class="menu-item first-item expand-btn">Giới thiệu</a>
+            <a href="introduce.html" class="menu-item first-item expand-btn"
+              >Giới thiệu</a
+            >
           </li>
           <li class="dropdown">
-            <a href="#" class="menu-item first-item expand-btn"
+            <a
+              href="trainning-program.html"
+              class="menu-item first-item expand-btn"
               >Chương trình đào tạo
               <i class="fa-solid fa-caret-down ms-2"></i>
             </a>
@@ -174,7 +180,7 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="menu-item first-item expand-btn"
+            <a href="news.html" class="menu-item first-item expand-btn"
               >Thư viện điện tử
               <i class="fa-solid fa-caret-down ms-2"></i>
             </a>
@@ -309,7 +315,7 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="menu-item first-item expand-btn"
+            <a href="partners.html" class="menu-item first-item expand-btn"
               >Dự án & đối tác</a
             >
           </li>
@@ -318,38 +324,6 @@
           </li>
         </ul>
       </header>
-    </div>
-
-    <!-- Modal -->
-    <div
-      id="searchModal"
-      class="fixed inset-0 bg-black opacity-90 z-[1000] hidden items-start justify-center"
-    >
-      <!-- Modal content -->
-      <div class="relative w-full p-5! text-center">
-        <div class="float-right">
-          <button
-            class="text-white uppercase text-lg cursor-pointer hover:scale-110"
-            onclick="toggleSearchModal()"
-          >
-            Close
-          </button>
-        </div>
-        <div
-          class="flex rounded-md shadow-lg overflow-hidden bg-white max-w-3xl mx-4 mt-20! m-auto!"
-        >
-          <input
-            type="text"
-            placeholder="Tìm kiếm ..."
-            class="flex-1 px-6! py-4! text-lg text-gray-700 focus:outline-none"
-          />
-          <button
-            class="bg-[#008236] px-4! py-3! text-white font-semibold text-sm uppercase cursor-pointer"
-          >
-            Search Now
-          </button>
-        </div>
-      </div>
     </div>
     <main>
       <!-- Breadcrumb -->
@@ -411,7 +385,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div class="flex flex-col">
                 <img
-                  src="images/image2.jpg"
+                  src="./images/image2.jpg"
                   alt="Artisan Park"
                   class="w-full h-48 object-cover mb-3"
                   width="auto"
@@ -428,7 +402,7 @@
               </div>
               <div class="flex flex-col">
                 <img
-                  src="images/image2.jpg"
+                  src="./images/image2.jpg"
                   alt="EcoHome N01 & N05"
                   class="w-full h-48 object-cover mb-3"
                   width="auto"
@@ -444,7 +418,7 @@
               </div>
               <div class="flex flex-col">
                 <img
-                  src="images/image2.jpg"
+                  src="./images/image2.jpg"
                   alt="Sycamore"
                   class="w-full h-48 object-cover mb-3"
                   width="auto"
@@ -460,7 +434,7 @@
               </div>
               <div class="flex flex-col">
                 <img
-                  src="images/image2.jpg"
+                  src="./images/image2.jpg"
                   alt="The Diamond Villa"
                   class="w-full h-48 object-cover mb-3"
                   width="auto"
@@ -476,7 +450,7 @@
               </div>
               <div class="flex flex-col">
                 <img
-                  src="images/image2.jpg"
+                  src="./images/image2.jpg"
                   alt="The Ocean Villas Quy Nhon"
                   class="w-full h-48 object-cover mb-3"
                   width="auto"
@@ -492,7 +466,7 @@
               </div>
               <div class="flex flex-col">
                 <img
-                  src="images/image2.jpg"
+                  src="./images/image2.jpg"
                   alt="Tea Resort Prenn"
                   class="w-full h-48 object-cover mb-3"
                   width="auto"
@@ -601,14 +575,14 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-f5faf5">
+    <footer class="bg-[url('./images/footer.png')] bg-cover">
       <div class="max-w-custom px-8 md:px-0">
         <div
-          class="grid grid-cols-1 lg:grid-cols-3 justify-between items-start py-8 gap-12"
+          class="flex flex-col lg:flex-row justify-between items-start py-8 gap-8"
         >
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center w-full lg:w-[30%]">
             <img
-              src="images/VDI-logo.svg"
+              src="./images/logo.png"
               alt="VEIPI Logo"
               width="200px"
               height="auto"
@@ -617,7 +591,9 @@
               VIỆN NGHIÊN CỨU ĐÀO TẠO KHỞI NGHIỆP VÀ SỞ HỮU TRÍ TUỆ
             </div>
           </div>
-          <ul class="flex flex-col gap-2 text-20451e">
+          <ul
+            class="flex flex-col gap-2 text-20451e text-sm md:text-base w-full lg:w-[40%]"
+          >
             <li>
               <i class="fa-solid fa-location-dot me-2"></i> Tầng 3 Tòa nhà 96A
               Định Công, Thanh Xuân, Hà Nội
@@ -628,9 +604,9 @@
               info@truongthanhmedia.vn
             </li>
           </ul>
-          <div class="flex flex-col gap-10">
+          <div class="flex flex-col gap-10 w-full lg:w-[30%]">
             <ul
-              class="flex flex-1 flex-col gap-2 text-base lg:ps-5 lg:border-l-[2px] border-[#ccc]"
+              class="flex flex-1 flex-col gap-2 lg:ps-5 lg:border-l-[2px] border-[#ccc] text-sm md:text-base"
             >
               <li>
                 <a href="#" class="text-20451e!"
@@ -651,7 +627,6 @@
                   alt=""
                   width="30px"
                   height="30px"
-                  class="hover:scale-110"
                 />
               </a>
               <a href="#"
@@ -661,7 +636,6 @@
                   srcset=""
                   width="30px"
                   height="auto"
-                  class="hover:scale-110"
               /></a>
               <a href="#">
                 <img
@@ -670,14 +644,13 @@
                   srcset=""
                   width="30px"
                   height="auto"
-                  class="hover:scale-110"
                 />
               </a>
             </div>
           </div>
         </div>
         <hr class="text-20451e pb-3" />
-        <div class="text-20451e text-base text-center">
+        <div class="text-20451e text-center text-sm md:text-base">
           Copyright © 2023 by
           <span class="font-bold">TRUONG THANH MEDIA</span>
         </div>
@@ -693,12 +666,5 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script>
-      function toggleSearchModal() {
-        const modal = document.getElementById("searchModal");
-        modal.classList.toggle("hidden");
-        modal.classList.toggle("flex");
-      }
-    </script>
   </body>
 </html>

@@ -52,7 +52,7 @@
       >
         <div class="flex items-center gap-5">
           <img
-            src="images/VDI-logo.svg"
+            src="./images/logo.png"
             alt="VEIPI Logo"
             width="120"
             height="60"
@@ -68,7 +68,7 @@
             Đăng ký tư vấn ngay <i class="fa-solid fa-arrow-right"></i>
           </button>
           <button
-            onclick="toggleSearchModal()"
+            onclick="toggleModal()"
             class="w-[40px] h-[40px] flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300 cursor-pointer"
           >
             <em class="fas fa-search"></em>
@@ -94,22 +94,28 @@
             <button class="close-btn text-black">
               <em class="fas fa-times"></em>
             </button>
-            <a href="#" title="VDigital"
+            <a href="home.html" title="Trang chủ"
               ><img
-                src="https://vdigital.vn/wp-content/uploads/2022/09/VDI-logo.svg"
+                src="./images/logo.png"
                 alt="logo"
                 width="auto"
                 height="45px"
             /></a>
           </div>
           <li class="dropdown">
-            <a href="#" class="menu-item first-item expand-btn">Trang chủ</a>
+            <a href="home.html" class="menu-item first-item expand-btn"
+              >Trang chủ</a
+            >
           </li>
           <li class="dropdown">
-            <a href="#" class="menu-item first-item expand-btn">Giới thiệu</a>
+            <a href="introduce.html" class="menu-item first-item expand-btn"
+              >Giới thiệu</a
+            >
           </li>
           <li class="dropdown">
-            <a href="#" class="menu-item first-item expand-btn"
+            <a
+              href="trainning-program.html"
+              class="menu-item first-item expand-btn"
               >Chương trình đào tạo
               <i class="fa-solid fa-caret-down ms-2"></i>
             </a>
@@ -174,7 +180,7 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="menu-item first-item expand-btn"
+            <a href="news.html" class="menu-item first-item expand-btn"
               >Thư viện điện tử
               <i class="fa-solid fa-caret-down ms-2"></i>
             </a>
@@ -309,7 +315,7 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="menu-item first-item expand-btn"
+            <a href="partners.html" class="menu-item first-item expand-btn"
               >Dự án & đối tác</a
             >
           </li>
@@ -318,38 +324,6 @@
           </li>
         </ul>
       </header>
-    </div>
-
-    <!-- Modal -->
-    <div
-      id="searchModal"
-      class="fixed inset-0 bg-black opacity-90 z-[1000] hidden items-start justify-center"
-    >
-      <!-- Modal content -->
-      <div class="relative w-full p-5! text-center">
-        <div class="float-right">
-          <button
-            class="text-white uppercase text-lg cursor-pointer hover:scale-110"
-            onclick="toggleSearchModal()"
-          >
-            Close
-          </button>
-        </div>
-        <div
-          class="flex rounded-md shadow-lg overflow-hidden bg-white max-w-3xl mx-4 mt-20! m-auto!"
-        >
-          <input
-            type="text"
-            placeholder="Tìm kiếm ..."
-            class="flex-1 px-6! py-4! text-lg text-gray-700 focus:outline-none"
-          />
-          <button
-            class="bg-[#008236] px-4! py-3! text-white font-semibold text-sm uppercase cursor-pointer"
-          >
-            Search Now
-          </button>
-        </div>
-      </div>
     </div>
     <main>
       <!-- Breadcrumb -->
@@ -384,42 +358,18 @@
         <div class="flex flex-col lg:flex-row gap-8">
           <!-- Sidebar filter -->
           <aside class="w-full lg:w-1/4 mb-6 lg:mb-0 slider-filter">
-            <div class="bg-white shadow-lg">
-              <h3
-                class="font-bold text-base bg-[#eaf6e0] text-gray-800 border-b-2 border-green-600 px-4 py-2 text-center"
-              >
-                Tin tức & sự kiện
-              </h3>
-              <ul class="flex flex-col gap-2 px-4 py-2">
+            <div class="bg-[#f5faf5] shadow-lg">
+              <ul class="flex flex-col">
                 <li>
                   <a
                     href="#"
-                    class="py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
-                    ><i class="fa-solid fa-angle-right me-3"></i>Tin tức viện</a
+                    class="block py-2 px-3 text-gray-700 hover:text-green-900"
+                    >Dự án tiêu biểu</a
                   >
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    class="py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
-                    ><i class="fa-solid fa-angle-right me-3"></i>Góc nhìn chuyên
-                    gia</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
-                    ><i class="fa-solid fa-angle-right me-3"></i>Cập nhật pháp
-                    luật</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="py-2 px-3 justify-start! rounded hover:text-green-900 hover:font-bold"
-                    ><i class="fa-solid fa-angle-right me-3"></i>Case study thực
-                    tiễn</a
+                <li class="bg-green-100">
+                  <a href="#" class="block py-2 px-3 font-bold text-green-900"
+                    >Mạng lưới đối tác</a
                   >
                 </li>
               </ul>
@@ -430,232 +380,158 @@
             <h2
               class="text-2xl md:text-3xl font-bold text-green-900 border-b-2 border-green-600 pb-2 mb-8"
             >
-              TIN TỨC VIỆN
+              MẠNG LƯỚI ĐỐI TÁC
             </h2>
-            <div class="flex flex-col gap-8 news-content">
-              <div class="flex flex-col md:flex-row gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4">
+              <div class="flex flex-col items-center text-center">
                 <img
-                  src="images/image2.jpg"
-                  alt="NTU Đài Loan"
-                  class="w-full md:w-56 h-40 object-cover"
-                  width="224"
-                  height="160"
+                  src="./images/partner/baoviet.png"
+                  width="auto"
+                  height="auto"
+                  alt="Ban Tuyên Giáo"
+                  class="w-20 h-20 object-contain mb-2"
                 />
-                <div class="flex-1 flex flex-col justify-between">
-                  <div>
-                    <div class="font-bold text-lg text-green-900 mb-1">
-                      Thông báo tạm thời Tuyển sinh Chương trình Thạc sĩ NTU
-                      (Đài Loan) - K17 2024
-                    </div>
-                    <div
-                      class="flex items-center gap-2 text-gray-500 text-sm mb-2"
-                    >
-                      <i class="fa-regular fa-calendar"></i> 10/5/2024
-                    </div>
-                    <div class="text-gray-700 text-sm mb-2">
-                      Thông báo tạm thời – Tuyển Sinh 2024: Chương trình Liên
-                      kết Đào tạo Thạc sĩ giữa Trường Đại học Xây dựng Hà Nội và
-                      Trường Đại học Quốc gia Đài Loan
-                    </div>
-                  </div>
-                  <a href="#" class="text-green-700 font-semibold text-sm mt-2"
-                    >Xem thêm</a
-                  >
-                </div>
+                <span class="text-xs font-semibold"
+                  >BAN TUYÊN GIÁO<br />VÀ DÂN VẬN TRUNG ƯƠNG</span
+                >
               </div>
-              <div class="flex flex-col md:flex-row gap-6">
+              <div class="flex flex-col items-center text-center">
                 <img
-                  src="images/image2.jpg"
-                  alt="HTWK Đức"
-                  class="w-full md:w-56 h-40 object-cover"
-                  width="224"
-                  height="160"
+                  src="./images/partner/BHXHVN.png"
+                  width="auto"
+                  height="auto"
+                  alt="Bộ Tư Pháp"
+                  class="w-20 h-20 object-contain mb-2"
                 />
-                <div class="flex-1 flex flex-col justify-between">
-                  <div>
-                    <div class="font-bold text-lg text-green-900 mb-1">
-                      Thông báo Tuyển sinh Chương trình Thạc sĩ HTWK (Đức) - K5
-                      2024
-                    </div>
-                    <div
-                      class="flex items-center gap-2 text-gray-500 text-sm mb-2"
-                    >
-                      <i class="fa-regular fa-calendar"></i> 10/5/2024
-                    </div>
-                    <div class="text-gray-700 text-sm mb-2">
-                      Thông báo Tuyển sinh Khóa 5 – Chương trình Liên kết Đào
-                      tạo Thạc sĩ giữa Trường Đại học Xây dựng Hà Nội và Trường
-                      Đại học Khoa học Ứng dụng Leipzig (CHLB Đức)
-                    </div>
-                  </div>
-                  <a href="#" class="text-green-700 font-semibold text-sm mt-2"
-                    >Xem thêm</a
-                  >
-                </div>
+                <span class="text-xs font-semibold">BỘ TƯ PHÁP</span>
               </div>
-              <div class="flex flex-col md:flex-row gap-6">
+              <div class="flex flex-col items-center text-center">
                 <img
-                  src="images/image2.jpg"
-                  alt="HUDDERSFIELD Anh"
-                  class="w-full md:w-56 h-40 object-cover"
-                  width="224"
-                  height="160"
+                  src="./images/partner/Bo-QP.png"
+                  width="auto"
+                  height="auto"
+                  alt="Bộ Giáo Dục"
+                  class="w-20 h-20 object-contain mb-2"
                 />
-                <div class="flex-1 flex flex-col justify-between">
-                  <div>
-                    <div class="font-bold text-lg text-green-900 mb-1">
-                      Thông tin Chương trình Chuyển tiếp TC HUDDERSFIELD (Anh
-                      quốc) - Thạc sĩ
-                    </div>
-                    <div
-                      class="flex items-center gap-2 text-gray-500 text-sm mb-2"
-                    >
-                      <i class="fa-regular fa-calendar"></i> 10/5/2024
-                    </div>
-                    <div class="text-gray-700 text-sm mb-2">
-                      Chương trình hợp tác bậc cao học giữa Trường Đại học Xây
-                      Dựng Hà Nội và Trường Đại học HUDDERSFIELD (Vương quốc
-                      Anh)
-                    </div>
-                  </div>
-                  <a href="#" class="text-green-700 font-semibold text-sm mt-2"
-                    >Xem thêm</a
-                  >
-                </div>
+                <span class="text-xs font-semibold"
+                  >BỘ GIÁO DỤC VÀ ĐÀO TẠO</span
+                >
               </div>
-              <div class="flex flex-col md:flex-row gap-6">
+              <div class="flex flex-col items-center text-center">
                 <img
-                  src="images/image2.jpg"
-                  alt="UIC Hoa Kỳ"
-                  class="w-full md:w-56 h-40 object-cover"
-                  width="224"
-                  height="160"
+                  src="./images/partner/Bo-TC.png"
+                  width="auto"
+                  height="auto"
+                  alt="Bộ Khoa Học"
+                  class="w-20 h-20 object-contain mb-2"
                 />
-                <div class="flex-1 flex flex-col justify-between">
-                  <div>
-                    <div class="font-bold text-lg text-green-900 mb-1">
-                      Thông tin Chương trình Thạc sĩ Đại học ILLINOIS CHICAGO
-                      (UIC) - Hoa Kỳ
-                    </div>
-                    <div
-                      class="flex items-center gap-2 text-gray-500 text-sm mb-2"
-                    >
-                      <i class="fa-regular fa-calendar"></i> 10/5/2024
-                    </div>
-                    <div class="text-gray-700 text-sm mb-2">
-                      Chương trình hợp tác giữa Trường Đại học Xây dựng Hà Nội
-                      và Trường Đại học ILLINOIS CHICAGO (UIC)– Hoa Kỳ
-                    </div>
-                  </div>
-                  <a href="#" class="text-green-700 font-semibold text-sm mt-2"
-                    >Xem thêm</a
-                  >
-                </div>
+                <span class="text-xs font-semibold"
+                  >BỘ KHOA HỌC VÀ CÔNG NGHỆ</span
+                >
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/partner/env.png"
+                  width="auto"
+                  height="auto"
+                  alt="Bộ Y Tế"
+                  class="w-20 h-20 object-contain mb-2"
+                />
+                <span class="text-xs font-semibold">BỘ Y TẾ</span>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/partner/HN-tele.png"
+                  width="auto"
+                  height="auto"
+                  alt="VTV"
+                  class="w-20 h-20 object-contain mb-2"
+                />
+                <span class="text-xs font-semibold"
+                  >ĐÀI TRUYỀN HÌNH VIỆT NAM</span
+                >
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/partner/mb.png"
+                  width="auto"
+                  height="auto"
+                  alt="IP Viet Nam"
+                  class="w-20 h-20 object-contain mb-2"
+                />
+                <span class="text-xs font-semibold">CỤC SỞ HỮU TRÍ TUỆ</span>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/partner/mobifone.png"
+                  width="auto"
+                  height="auto"
+                  alt="DCK"
+                  class="w-20 h-20 object-contain mb-2"
+                />
+                <span class="text-xs font-semibold"
+                  >CỤC ĐỔI MỚI SÁNG TẠO,<br />CHUYỂN ĐỔI XANH VÀ KHUYẾN
+                  CÔNG</span
+                >
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/partner/pv.png"
+                  width="auto"
+                  height="auto"
+                  alt="VIA"
+                  class="w-20 h-20 object-contain mb-2"
+                />
+                <span class="text-xs font-semibold">CỤC CÔNG NGHIỆP</span>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/partner/vietlott.png"
+                  width="auto"
+                  height="auto"
+                  alt="VFA"
+                  class="w-20 h-20 object-contain mb-2"
+                />
+                <span class="text-xs font-semibold">CỤC AN TOÀN THỰC PHẨM</span>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/partner/VNTA.png"
+                  width="auto"
+                  height="auto"
+                  alt="BHXH"
+                  class="w-20 h-20 object-contain mb-2"
+                />
+                <span class="text-xs font-semibold"
+                  >BẢO HIỂM XÃ HỘI VIỆT NAM</span
+                >
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/partner/vp.png"
+                  width="auto"
+                  height="auto"
+                  alt="PV GAS"
+                  class="w-20 h-20 object-contain mb-2"
+                />
+                <span class="text-xs font-semibold"
+                  >TẬP ĐOÀN DẦU KHÍ VIỆT NAM</span
+                >
               </div>
             </div>
-            <!-- Pagination -->
-            <nav aria-label="Pagination" class="mt-8 flex justify-center">
-              <ul class="inline-flex items-center -space-x-px text-base h-10">
-                <li>
-                  <a
-                    href="#"
-                    class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-green-700"
-                  >
-                    <span class="sr-only">Previous</span>
-                    <svg
-                      class="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15 19l-7-7 7-7"
-                      />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="flex items-center justify-center px-4 h-10 leading-tight text-green-700 bg-green-100 border border-green-300 font-bold"
-                    >1</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
-                    >2</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
-                    >3</a
-                  >
-                </li>
-                <li>
-                  <span
-                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-400 bg-white border border-gray-300"
-                    >...</span
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
-                    >8</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-green-700"
-                    >9</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-green-700"
-                  >
-                    <span class="sr-only">Next</span>
-                    <svg
-                      class="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </nav>
           </div>
         </div>
       </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-f5faf5">
+    <footer class="bg-[url('./images/footer.png')] bg-cover">
       <div class="max-w-custom px-8 md:px-0">
         <div
-          class="grid grid-cols-1 lg:grid-cols-3 justify-between items-start py-8 gap-12"
+          class="flex flex-col lg:flex-row justify-between items-start py-8 gap-8"
         >
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center w-full lg:w-[30%]">
             <img
-              src="images/VDI-logo.svg"
+              src="./images/logo.png"
               alt="VEIPI Logo"
               width="200px"
               height="auto"
@@ -664,7 +540,9 @@
               VIỆN NGHIÊN CỨU ĐÀO TẠO KHỞI NGHIỆP VÀ SỞ HỮU TRÍ TUỆ
             </div>
           </div>
-          <ul class="flex flex-col gap-2 text-20451e">
+          <ul
+            class="flex flex-col gap-2 text-20451e text-sm md:text-base w-full lg:w-[40%]"
+          >
             <li>
               <i class="fa-solid fa-location-dot me-2"></i> Tầng 3 Tòa nhà 96A
               Định Công, Thanh Xuân, Hà Nội
@@ -675,9 +553,9 @@
               info@truongthanhmedia.vn
             </li>
           </ul>
-          <div class="flex flex-col gap-10">
+          <div class="flex flex-col gap-10 w-full lg:w-[30%]">
             <ul
-              class="flex flex-1 flex-col gap-2 text-base lg:ps-5 lg:border-l-[2px] border-[#ccc]"
+              class="flex flex-1 flex-col gap-2 lg:ps-5 lg:border-l-[2px] border-[#ccc] text-sm md:text-base"
             >
               <li>
                 <a href="#" class="text-20451e!"
@@ -698,7 +576,6 @@
                   alt=""
                   width="30px"
                   height="30px"
-                  class="hover:scale-110"
                 />
               </a>
               <a href="#"
@@ -708,7 +585,6 @@
                   srcset=""
                   width="30px"
                   height="auto"
-                  class="hover:scale-110"
               /></a>
               <a href="#">
                 <img
@@ -717,14 +593,13 @@
                   srcset=""
                   width="30px"
                   height="auto"
-                  class="hover:scale-110"
                 />
               </a>
             </div>
           </div>
         </div>
         <hr class="text-20451e pb-3" />
-        <div class="text-20451e text-base text-center">
+        <div class="text-20451e text-center text-sm md:text-base">
           Copyright © 2023 by
           <span class="font-bold">TRUONG THANH MEDIA</span>
         </div>
@@ -740,12 +615,5 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script>
-      function toggleSearchModal() {
-        const modal = document.getElementById("searchModal");
-        modal.classList.toggle("hidden");
-        modal.classList.toggle("flex");
-      }
-    </script>
   </body>
 </html>
