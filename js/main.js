@@ -7,25 +7,20 @@ const expandBtn = document.querySelectorAll(".expand-btn");
 const closeBtn = document.querySelector(".close-btn");
 const header = document.getElementById("header");
 
-
 // Scroll
 window.addEventListener("scroll", () => {
     if (window.scrollY > 120) {
         header.classList.add("fixed");
-        header.classList.add("-translate-x-1/2");
-        header.classList.add("left-1/2");
         header.classList.add("border-[#e5e5e5]");
         header.classList.add("border-b-[1px]");
         header.classList.add("top-0");
-        document.querySelector(".top-header").classList.add("hidden!");
+        header.classList.add("shadow-lg");
     } else {
         header.classList.remove("fixed");
-        header.classList.remove("-translate-x-1/2");
-        header.classList.remove("left-1/2");
         header.classList.remove("border-[#e5e5e5]");
         header.classList.remove("border-b-[1px]");
         header.classList.remove("top-0");
-        document.querySelector(".top-header").classList.remove("hidden!");
+        header.classList.remove("shadow-lg");
     }
 });
 
@@ -70,14 +65,25 @@ closeBtn.addEventListener("click", e => {
     });
 });
 
-// mobile menu expand
-expandBtn.forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        btn.classList.toggle("open");
+document.querySelectorAll('.fa-caret-down').forEach(function(icon) {
+    icon.addEventListener('click', function(e) {
+        let parentA = icon.closest('a');
+        if (parentA) {
+            parentA.classList.toggle('open');
+        }
+        e.preventDefault();
+        e.stopPropagation();
     });
 });
+// mobile menu expand
+// expandBtn.forEach((btn) => {
+//     btn.addEventListener("click", (event) => {
+//         event.preventDefault();
+//         event.stopPropagation();
+//         btn.classList.toggle("open");
+//     });
+// });
+
 
 // Language dropdown
 const dropdownLanguageBtn = document.getElementById("dropdown-language-btn");
@@ -87,32 +93,58 @@ const dropdownLanguageContent = document.getElementById("dropdown-language-conte
 const locales = ["vi-VN", "en-GB","zh-CN","ja-JP","ko-KR"];
 // Get flag source URL based on country code
 function getFlagSrc(countryCode) {
-  return /^[A-Z]{2}$/.test(countryCode)
-      ? `https://flagsapi.com/${countryCode.toUpperCase()}/shiny/64.png`
-    : "";
+    return /^[A-Z]{2}$/.test(countryCode)
+        ? `https://flagsapi.com/${countryCode.toUpperCase()}/shiny/64.png`
+        : "";
 }
 // Set selected locale and update dropdown
 function setSelectedLocale(locale) {
-  const intlLocale = new Intl.Locale(locale);
-  const langName = locale.slice(0, 2).toUpperCase();
+    const intlLocale = new Intl.Locale(locale);
+    const langName = locale.slice(0, 2).toUpperCase();
 
-  dropdownLanguageContent.innerHTML = "";
+    dropdownLanguageContent.innerHTML = "";
 
-  const otherLocales = locales.filter((loc) => loc !== locale);
-  otherLocales.forEach((otherLocale) => {
-    const otherIntlLocale = new Intl.Locale(otherLocale);
-    const otherLangName = otherLocale.slice(0,2).toUpperCase();
+    const otherLocales = locales.filter((loc) => loc !== locale);
+    otherLocales.forEach((otherLocale) => {
+        const otherIntlLocale = new Intl.Locale(otherLocale);
+        const otherLangName = otherLocale.slice(0,2).toUpperCase();
 
-    const listEl = document.createElement("li");
-    listEl.innerHTML = `<img src="${getFlagSrc(otherIntlLocale.region)}" />${otherLangName}`;
-    listEl.value = otherLocale;
-    listEl.addEventListener("mousedown", function () {
-      setSelectedLocale(otherLocale);
+        const listEl = document.createElement("li");
+        listEl.innerHTML = `<img src="${getFlagSrc(otherIntlLocale.region)}" />${otherLangName}`;
+        listEl.value = otherLocale;
+        listEl.addEventListener("mousedown", function () {
+            setSelectedLocale(otherLocale);
+        });
+        dropdownLanguageContent.appendChild(listEl);
     });
-    dropdownLanguageContent.appendChild(listEl);
-  });
 
-  dropdownLanguageBtn.innerHTML = `<img src="${getFlagSrc(intlLocale.region)}"/>${langName}<span class="arrow-down"></span>`;
+    dropdownLanguageBtn.innerHTML = `<img src="${getFlagSrc(intlLocale.region)}"/>${langName}<span class="arrow-down"></span>`;
 }
 // Initialize with the first locale
 setSelectedLocale(locales[0]);
+
+
+function animateOnScroll(sectionId, animation = "animate__fadeInUp") {
+    const el = document.getElementById(sectionId);
+    if (!el) return;
+    function onScroll() {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+        el.classList.remove("opacity-0");
+        el.classList.add(animation);
+        window.removeEventListener("scroll", onScroll);
+        }
+    }
+    window.addEventListener("scroll", onScroll);
+    onScroll(); // check on load
+}
+document.addEventListener("DOMContentLoaded", function () {
+    animateOnScroll("section-courses");
+    animateOnScroll("section-why");
+    animateOnScroll("section-library");
+    animateOnScroll("section-innovation");
+    animateOnScroll("section-service");
+    animateOnScroll("section-news");
+    animateOnScroll("section-carousel-customer");
+    animateOnScroll("section-carousel-expert");
+});

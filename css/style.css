@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  font-family: "Muli", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .bg-edf5ed {
   background-color: #edf5ed;
@@ -10,36 +10,18 @@ body {
   background-color: #f5faf5;
 }
 
-.text-1a421a {
-  color: #1a421a;
+.text-20451e {
+  color: #20451e;
 }
 
-.font-muli {
-  font-family: "Muli", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Josefin Sans", sans-serif;
-}
-
-p {
-  font-family: "Roboto", sans-serif;
-}
-
-span {
-  font-family: "Roboto Slab", serif;
+.text-008542 {
+  color: #008542;
 }
 
 .max-w-custom {
   max-width: 1200px;
   margin: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 2.5rem 0.75rem 2.5rem 0.75rem;
 }
 
 /* top header */
@@ -49,7 +31,7 @@ span {
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  padding: 11px 0;
+  padding: 0.75rem;
 }
 
 /* Language */
@@ -162,41 +144,6 @@ a:hover {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 20px;
-}
-
-/* nav menu button */
-.menu-btn {
-  position: relative;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.navbar .menu-btn__lines::before,
-.navbar .menu-btn__lines::after {
-  content: "";
-  position: absolute;
-}
-
-.navbar .menu-btn__lines,
-.navbar .menu-btn__lines::before,
-.navbar .menu-btn__lines::after {
-  width: 1.5rem;
-  height: 2px;
-  background: #fff;
-  transition: all 0.4s ease-in-out;
-}
-
-.navbar .menu-btn__lines::before {
-  transform: translateY(-0.5rem);
-}
-
-.navbar .menu-btn__lines::after {
-  transform: translateY(0.5rem);
 }
 
 .navbar .menu-items {
@@ -411,6 +358,10 @@ a:hover {
   align-items: center;
 }
 
+.active-language {
+  background-color: #76a076;
+}
+
 @keyframes move-bg {
   0% {
     background-position: 0 0;
@@ -431,11 +382,12 @@ a:hover {
 }
 
 .carousel-item img {
-  border: 1px solid #e5e5e5;
-  border-radius: 50%;
   height: 100px;
   width: auto;
-  padding: 10px;
+}
+.carousel-customer .slick-track {
+  display: flex;
+  gap: 30px;
 }
 
 .slick-prev::before,
@@ -457,6 +409,28 @@ a:hover {
 .slider-filter ul li:not(:last-child) {
   padding-bottom: 5px;
   border-bottom: 1px solid #e5e5e5;
+}
+
+/* Course, News */
+.news-content > div:not(:last-child),
+.course-content > div:not(:last-child) {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #008542;
+}
+
+.active {
+  border-bottom: 2px solid white;
+}
+
+.streaming {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.streaming:hover {
+  transform: scale(1.1);
+  transition: all 1s ease;
 }
 
 /* Responsive style */
@@ -483,14 +457,10 @@ a:hover {
   }
 
   .top-header {
-    width: 100vw;
-    font-size: 14px;
-    display: block;
-  }
-
-  .navbar {
-    padding: 10px 0;
-    width: 100vw;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    padding: 10px 20px;
   }
 
   .navbar .menu-item {
@@ -517,10 +487,6 @@ a:hover {
   .overlay--active {
     opacity: 1;
     visibility: visible;
-  }
-
-  .menu-btn {
-    display: flex;
   }
 
   .navbar .menu-items {
@@ -630,8 +596,5 @@ a:hover {
   }
   .contact {
     display: none !important;
-  }
-  .top-header {
-    justify-content: center;
   }
 }

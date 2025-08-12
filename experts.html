@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Animation css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Font family -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="bg-white w-full z-[1000]" id="header">
+      <!-- Top header -->
+      <div
+        class="top-header flex items-center justify-between px-6 py-2 bg-white"
+      >
+        <div class="flex items-center gap-5">
+          <img
+            src="./images/logo.png"
+            alt="VEIPI Logo"
+            width="120"
+            height="60"
+          />
+          <div class="font-bold text-[10px] lg:text-[18px] text-20451e">
+            VIỆN NGHIÊN CỨU ĐÀO TẠO KHỞI NGHIỆP<br />VÀ SỞ HỮU TRÍ TUỆ
+          </div>
+        </div>
+        <div class="flex items-center gap-4 justify-between">
+          <button
+            class="bg-green-700 text-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-green-800"
+          >
+            Đăng ký tư vấn ngay <em class="fa-solid fa-arrow-right"></em>
+          </button>
+          <button
+            onclick="toggleModal()"
+            class="w-[40px] h-[40px] flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300 cursor-pointer"
+          >
+            <em class="fas fa-search"></em>
+          </button>
+          <div class="flex items-center gap-1">
+            <div class="dropdown-language" tab-index="0">
+              <button id="dropdown-language-btn"></button>
+              <ul
+                class="dropdown-language-content"
+                id="dropdown-language-content"
+              ></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Menu -->
+      <header class="navbar sticky">
+        <div class="menu-btn">
+          <div class="menu-btn__lines"></div>
+        </div>
+        <ul class="menu-items">
+          <div class="logo-sm">
+            <button class="close-btn text-black">
+              <em class="fas fa-times"></em>
+            </button>
+            <a href="home.html" title="Trang chủ"
+              ><img
+                src="./images/logo.png"
+                alt="logo"
+                width="auto"
+                height="45px"
+            /></a>
+          </div>
+          <li class="dropdown">
+            <a href="home.html" class="menu-item first-item expand-btn"
+              >Trang chủ</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="introduce.html" class="menu-item first-item expand-btn"
+              >Giới thiệu</a
+            >
+          </li>
+          <li class="dropdown">
+            <a
+              href="trainning-program.html"
+              class="menu-item first-item expand-btn"
+              >Chương trình đào tạo
+              <em class="fa-solid fa-caret-down ms-2"></em>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Chương trình đào tạo 1
+                  <em class="fa-solid fa-caret-right icon-pc"></em>
+                  <em class="fa-solid fa-caret-down icon-sm"></em>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 1.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Chương trình đào tạo 2
+                  <em class="fa-solid fa-caret-right icon-pc"></em>
+                  <em class="fa-solid fa-caret-down icon-sm"></em>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Chương trình đào tạo 2.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Chương trình đào tạo 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="news.html" class="menu-item first-item expand-btn"
+              >Thư viện điện tử
+              <em class="fa-solid fa-caret-down ms-2"></em>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Thư viện điện tử 1
+                  <em class="fa-solid fa-caret-right icon-pc"></em>
+                  <em class="fa-solid fa-caret-down icon-sm"></em>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 1.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Thư viện điện tử 2
+                  <em class="fa-solid fa-caret-right icon-pc"></em>
+                  <em class="fa-solid fa-caret-down icon-sm"></em>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Thư viện điện tử 2.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Thư viện điện tử 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Đổi mới sáng tạo</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn"
+              >Dịch vụ tư vấn
+              <em class="fa-solid fa-caret-down ms-2"></em>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Dịch vụ tư vấn 1
+                  <em class="fa-solid fa-caret-right icon-pc"></em>
+                  <em class="fa-solid fa-caret-down icon-sm"></em>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 1.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-right">
+                <a href="#" class="menu-item expand-btn"
+                  >Dịch vụ tư vấn 2
+                  <em class="fa-solid fa-caret-right icon-pc"></em>
+                  <em class="fa-solid fa-caret-down icon-sm"></em>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.1</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.2</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.3</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.4</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.5</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#">Dịch vụ tư vấn 2.6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Dịch vụ tư vấn 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="partners.html" class="menu-item first-item expand-btn"
+              >Dự án & đối tác</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu-item first-item expand-btn">Liên hệ</a>
+          </li>
+        </ul>
+      </header>
+    </div>
+    <main>
+      <!-- Breadcrumb -->
+      <div class="bg-green-200">
+        <nav
+          aria-label="breadcrumb"
+          class="flex justify-start text-[#233e7a] text-[17px] max-w-custom py-1! px-3"
+        >
+          <ol class="flex h-8 space-x-2">
+            <li class="flex items-center">
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                class="flex items-center hover:underline font-normal!"
+                >Home</a
+              >
+            </li>
+            <li class="flex items-center space-x-1">
+              <em class="fa-solid fa-angle-right"></em>
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                class="flex items-center px-1 font-normal!"
+                >Chính phủ điện tử</a
+              >
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <section class="max-w-custom">
+        <div class="flex flex-col lg:flex-row gap-8">
+          <aside class="w-full lg:w-1/4 mb-6 lg:mb-0 slider-filter">
+            <div class="bg-[#f5faf5] shadow-lg">
+              <h3
+                class="font-bold text-base bg-[#eaf6e0] text-gray-800 border-b-2 border-green-600 px-4 py-2 text-center"
+              >
+                Đội ngũ chuyên gia
+              </h3>
+              <ul class="flex flex-col gap-3 px-4 py-2">
+                <li>
+                  <label class="flex items-center gap-2"
+                    ><input type="checkbox" class="accent-green-600" /> Quản lý
+                    nhà nước</label
+                  >
+                </li>
+                <li>
+                  <label class="flex items-center gap-2"
+                    ><input type="checkbox" class="accent-green-600" /> Luật
+                    sư</label
+                  >
+                </li>
+                <li>
+                  <label class="flex items-center gap-2"
+                    ><input type="checkbox" class="accent-green-600" /> Nhãn
+                    hiệu</label
+                  >
+                </li>
+                <li>
+                  <label class="flex items-center gap-2"
+                    ><input type="checkbox" class="accent-green-600" /> Sáng
+                    chế</label
+                  >
+                </li>
+                <li>
+                  <label class="flex items-center gap-2"
+                    ><input type="checkbox" class="accent-green-600" /> Bản
+                    quyền</label
+                  >
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <div class="flex-1">
+            <h2
+              class="text-2xl md:text-3xl font-bold text-green-900 border-b-2 border-green-600 pb-2 mb-8"
+            >
+              ĐỘI NGŨ CHUYÊN GIA
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/image4.jpg"
+                  width="auto"
+                  height="auto"
+                  alt="Ông Lê Ngọc Lâm"
+                  class="w-32 h-32 rounded-full object-cover mb-4"
+                />
+                <div class="font-bold text-lg text-green-900 mb-1">
+                  Ông Lê Ngọc Lâm
+                </div>
+                <div class="text-gray-700 text-sm">
+                  Nguyên Phó Cục trưởng<br />Cục Sở hữu trí tuệ
+                </div>
+              </div>
+              <!-- Chuyên gia 2 -->
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/image4.jpg"
+                  width="auto"
+                  height="auto"
+                  alt="Ông Phan Ngân Sơn"
+                  class="w-32 h-32 rounded-full object-cover mb-4"
+                />
+                <div class="font-bold text-lg text-green-900 mb-1">
+                  Ông Phan Ngân Sơn
+                </div>
+                <div class="text-gray-700 text-sm">
+                  Nguyên Phó Cục trưởng<br />Cục Sở hữu trí tuệ
+                </div>
+              </div>
+              <!-- Chuyên gia 3 -->
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/image4.jpg"
+                  width="auto"
+                  height="auto"
+                  alt="Ông Nguyễn Ngọc Song"
+                  class="w-32 h-32 rounded-full object-cover mb-4"
+                />
+                <div class="font-bold text-lg text-green-900 mb-1">
+                  Ông Nguyễn Ngọc Song
+                </div>
+                <div class="text-gray-700 text-sm">
+                  Nguyên Phó Giám đốc Viện Khoa học,<br />công nghệ và đổi mới
+                  sáng tạo
+                </div>
+              </div>
+              <!-- Chuyên gia 4 -->
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/image4.jpg"
+                  width="auto"
+                  height="auto"
+                  alt="Luật sư Vũ Mạnh Hùng"
+                  class="w-32 h-32 rounded-full object-cover mb-4"
+                />
+                <div class="font-bold text-lg text-green-900 mb-1">
+                  Luật sư Vũ Mạnh Hùng
+                </div>
+                <div class="text-gray-700 text-sm">
+                  Giám đốc Công ty TNHH<br />Vũ Gia và công sự
+                </div>
+              </div>
+              <!-- Chuyên gia 5 -->
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/image4.jpg"
+                  width="auto"
+                  height="auto"
+                  alt="Ông Nguyễn Thanh Bình"
+                  class="w-32 h-32 rounded-full object-cover mb-4"
+                />
+                <div class="font-bold text-lg text-green-900 mb-1">
+                  Ông Nguyễn Thanh Bình
+                </div>
+                <div class="text-gray-700 text-sm">
+                  Nguyên Giám đốc Trung tâm<br />Nghiên cứu, Đào tạo và Hỗ trợ,
+                  Tư vấn
+                </div>
+              </div>
+              <!-- Chuyên gia 6 -->
+              <div class="flex flex-col items-center text-center">
+                <img
+                  src="./images/image4.jpg"
+                  width="auto"
+                  height="auto"
+                  alt="Ông Bùi Nguyên Hùng"
+                  class="w-32 h-32 rounded-full object-cover mb-4"
+                />
+                <div class="font-bold text-lg text-green-900 mb-1">
+                  Ông Bùi Nguyên Hùng
+                </div>
+                <div class="text-gray-700 text-sm">
+                  Chủ tịch Hiệp hội Sáng tạo<br />và Bản quyền Tác giả Việt
+                  Nam,<br />Nguyên Cục trưởng Cục Bản quyền tác giả
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[url('./images/footer.png')] bg-cover">
+      <div class="max-w-custom px-8 md:px-0">
+        <div
+          class="flex flex-col lg:flex-row justify-between items-start py-8 gap-8"
+        >
+          <div class="flex flex-col items-center w-full lg:w-[30%]">
+            <img
+              src="./images/logo.png"
+              alt="VEIPI Logo"
+              width="200px"
+              height="auto"
+            />
+            <div class="font-bold text-[20px] text-20451e text-center">
+              VIỆN NGHIÊN CỨU ĐÀO TẠO KHỞI NGHIỆP VÀ SỞ HỮU TRÍ TUỆ
+            </div>
+          </div>
+          <ul
+            class="flex flex-col gap-2 text-20451e text-sm md:text-base w-full lg:w-[40%]"
+          >
+            <li>
+              <em class="fa-solid fa-location-dot me-2"></em> Tầng 3 Tòa nhà 96A
+              Định Công, Thanh Xuân, Hà Nội
+            </li>
+            <li><em class="fa-solid fa-phone me-2"></em> 024.3668 7118</li>
+            <li>
+              <em class="fa-solid fa-envelope me-2"></em>
+              info@truongthanhmedia.vn
+            </li>
+          </ul>
+          <div class="flex flex-col gap-10 w-full lg:w-[30%]">
+            <ul
+              class="flex flex-1 flex-col gap-2 lg:ps-5 lg:border-l-[2px] border-[#ccc] text-sm md:text-base"
+            >
+              <li>
+                <a href="#" class="text-20451e!"
+                  >Các câu hỏi thường gặp (FAQ)</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-20451e!">Chính sách bán hàng</a>
+              </li>
+              <li>
+                <a href="#" class="text-20451e!">Chính sách bảo mật</a>
+              </li>
+            </ul>
+            <div class="flex gap-3 justify-start">
+              <a href="#">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2626/2626269.png"
+                  alt=""
+                  width="30px"
+                  height="30px"
+                />
+              </a>
+              <a href="#"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/128/3670/3670163.png"
+                  alt=""
+                  srcset=""
+                  width="30px"
+                  height="auto"
+              /></a>
+              <a href="#">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/4782/4782345.png"
+                  alt=""
+                  srcset=""
+                  width="30px"
+                  height="auto"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="text-20451e pb-3" />
+        <div class="text-20451e text-center text-sm md:text-base">
+          Copyright © 2023 by
+          <span class="font-bold">TRUONG THANH MEDIA</span>
+        </div>
+      </div>
+    </footer>
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <script src="js/main.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+  </body>
+</html>
