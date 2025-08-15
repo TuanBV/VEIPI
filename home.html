@@ -69,16 +69,23 @@
             Đăng ký tư vấn ngay <em class="fa-solid fa-arrow-right"></em>
           </button>
           <div
-            class="px-3 overflow-hidden w-[40px] h-[40px] hover:w-[270px] bg-[#e5e5e5] shadow-[2px_2px_20px_rgba(0,0,0,0.08)] rounded-full flex group items-center hover:duration-300 duration-300"
+            id="searchBox"
+            class="px-3 overflow-hidden w-[40px] h-[40px] bg-[#e5e5e5] shadow-[2px_2px_20px_rgba(0,0,0,0.08)] rounded-full flex items-center duration-300 cursor-pointer"
+            onclick="toggleSearch(event)"
           >
-            <div class="flex items-center justify-center text-gray-700">
-              <em class="fas fa-search"></em>
-            </div>
             <input
               type="text"
-              class="outline-none text-base bg-transparent w-full text-gray-700 font-normal px-2"
+              placeholder="Search..."
+              class="outline-none text-base bg-transparent flex-1 text-gray-700 font-normal px-2 hidden"
             />
+            <div
+              id="searchIcon"
+              class="flex items-center justify-center text-gray-700"
+            >
+              <em class="fas fa-search"></em>
+            </div>
           </div>
+
           <div class="flex items-center gap-1">
             <div class="dropdown-language" tab-index="0">
               <button id="dropdown-language-btn"></button>
@@ -457,10 +464,88 @@
 
     <main>
       <!-- Banner -->
-      <div
-        class="relative w-full h-[500px] bg-[url('./images/banner.jpg')] moving-bg"
-      >
-        <div class="z-10 h-full flex items-end justify-center pb-10">
+      <div class="banner relative w-full h-[500px] overflow-hidden">
+        <div class="carousel-banner h-full">
+          <picture>
+            <source media="(max-width:768px)" srcset="./images/image5.jpg" />
+            <source media="(min-width:768px)" srcset="./images/banner.jpg" />
+            <img
+              src="./images/banner.jpg"
+              width="auto"
+              height="auto"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+          </picture>
+          <picture>
+            <source media="(max-width:768px)" srcset="./images/image5.jpg" />
+            <source media="(min-width:768px)" srcset="./images/banner.jpg" />
+            <img
+              src="./images/banner.jpg"
+              width="auto"
+              height="auto"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+          </picture>
+          <picture>
+            <source media="(max-width:768px)" srcset="./images/image5.jpg" />
+            <source media="(min-width:768px)" srcset="./images/banner.jpg" />
+            <img
+              src="./images/banner.jpg"
+              width="auto"
+              height="auto"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+          </picture>
+          <picture>
+            <source media="(max-width:768px)" srcset="./images/image5.jpg" />
+            <source media="(min-width:768px)" srcset="./images/banner.jpg" />
+            <img
+              src="./images/banner.jpg"
+              width="auto"
+              height="auto"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+          </picture>
+          <picture>
+            <source media="(max-width:768px)" srcset="./images/image5.jpg" />
+            <source media="(min-width:768px)" srcset="./images/banner.jpg" />
+            <img
+              src="./images/banner.jpg"
+              width="auto"
+              height="auto"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+          </picture>
+          <picture>
+            <source media="(max-width:768px)" srcset="./images/image5.jpg" />
+            <source media="(min-width:768px)" srcset="./images/banner.jpg" />
+            <img
+              src="./images/banner.jpg"
+              width="auto"
+              height="auto"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+          </picture>
+          <picture>
+            <source media="(max-width:768px)" srcset="./images/image5.jpg" />
+            <source media="(min-width:768px)" srcset="./images/banner.jpg" />
+            <img
+              src="./images/banner.jpg"
+              width="auto"
+              height="auto"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+          </picture>
+        </div>
+
+        <div class="absolute inset-0 z-10 flex items-end justify-center pb-10">
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <a href="#" class="flex justify-center">
               <div
@@ -1137,6 +1222,7 @@
           </div>
         </div>
       </section>
+      <!-- Carousel customer -->
       <div
         class="max-w-custom text-center font-bold text-green-900 animate__animated opacity-0"
         id="section-carousel-customer"
@@ -1251,6 +1337,7 @@
           </div>
         </div>
       </div>
+      <!-- Carousel -->
       <div class="max-w-custom text-center font-bold text-green-900">
         <div class="relative items-center flex justify-center">
           <div
@@ -1479,7 +1566,7 @@
         </button>
       </div>
     </div>
-    <script src="js/main.js"></script>
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Slick JS -->
@@ -1487,100 +1574,6 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script>
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-      const scrollBtn = document.getElementById("scrollTopButton");
-      scrollBtn.style.display = "none";
-      window.addEventListener("scroll", function () {
-        if (window.scrollY > 0) {
-          scrollBtn.style.display = "flex";
-        } else {
-          scrollBtn.style.display = "none";
-        }
-      });
-      // Modal
-      document.addEventListener("DOMContentLoaded", () => {
-        const modal = document.getElementById("registerModal");
-
-        const toggleModal = () => {
-          modal.classList.toggle("hidden");
-          modal.classList.toggle("flex");
-        };
-
-        modal.addEventListener("click", (e) => {
-          if (e.target === modal) toggleModal();
-        });
-        window.toggleModal = toggleModal;
-      });
-
-      // Carousel
-      $(document).ready(function () {
-        $(".carousel").slick({
-          slidesToShow: 8,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 10000,
-          infinite: true,
-          speed: 500,
-          prevArrow:
-            '<button class="slick-prev custom-prev"><em class="fa-solid fa-caret-left text-green-600"></em></button>',
-          nextArrow:
-            '<button class="slick-next custom-next"><em class="fa-solid fa-caret-right text-green-600"></em></button>',
-          pauseOnHover: true,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-              },
-            },
-          ],
-        });
-        $(".carousel-customer").slick({
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 10000,
-          infinite: true,
-          speed: 500,
-          prevArrow: "",
-          nextArrow: "",
-          pauseOnHover: true,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              },
-            },
-          ],
-        });
-      });
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
