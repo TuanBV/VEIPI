@@ -157,6 +157,11 @@ a:hover {
   transition: 0.3s ease;
 }
 
+.dropdown-language-content li:hover {
+  background-color: gainsboro;
+  color: white;
+}
+
 .navbar ul li .arrow {
   transition: all 0.3s ease-out;
 }
@@ -409,6 +414,38 @@ a:hover {
 .slider-filter ul li:not(:last-child) {
   padding-bottom: 5px;
   border-bottom: 1px solid #e5e5e5;
+}
+
+/* Button prev, next of banner */
+.banner .slick-prev,
+.banner .slick-next {
+  display: block !important;
+  z-index: 20;
+}
+
+.banner .slick-prev {
+  left: 10px;
+}
+
+.banner .slick-next {
+  right: 10px;
+}
+
+.banner .slick-prev,
+.banner .slick-next {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.banner .slick-prev em,
+.banner .slick-next em {
+  font-size: 20px;
 }
 
 /* Course, News */
